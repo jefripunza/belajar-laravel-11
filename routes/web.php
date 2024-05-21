@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
@@ -16,35 +17,16 @@ Route::get('/about', function () {
     ]);
 });
 
-$posts = [
-    [
-        "post_slug" => "belajar-laravel-dengan-cepat",
-        "title" => "Belajar Laravel dengan Cepat?",
-        "body" => "saya sedang mencoba untuk belajar laravel secepat mungkin agar bisa menembus batas 7.5 JT, demi anak bojo bree",
-        "author" => "Jefri Herdi Triyanto",
-        "author_slug" => "jefri-herdi-triyanto",
-        "created_at" => "14 Januari 1996",
-    ],
-    [
-        "post_slug" => "mampukah-menerima-cobaan-ini",
-        "title" => "Mampukah Menerima Cobaan Ini?",
-        "body" => "ketika saya niat ingsun, insya allah barokah lancar. Amiinnn....",
-        "author" => "Watini",
-        "author_slug" => "watini",
-        "created_at" => "27 Juli 1992",
-    ],
-];
-
-Route::get('/posts', function () use (&$posts) {
+Route::get('/posts', function () {
     return view('posts', [
         'title' => 'Posts Page',
-        'posts' => $posts,
+        'posts' => Post::all(),
     ]);
 });
 
-Route::get('/post/{post_slug}', function ($post_slug) use (&$posts) {
+Route::get('/post/{post_slug}', function ($post_slug) {
     // $post = collect($posts)->firstWhere('post_slug', $post_slug);
-    $post = Arr::first($posts, function ($post) use ($post_slug) {
+    $post = Arr::first(Post::all(), function ($post) use ($post_slug) {
         return $post['post_slug'] == $post_slug;
     });
     return view('post', [
