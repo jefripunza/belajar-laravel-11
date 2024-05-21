@@ -16,8 +16,6 @@ Route::get('/about', function () {
     ]);
 });
 
-// PR...
-
 $posts = [
     [
         "post_slug" => "belajar-laravel-dengan-cepat",

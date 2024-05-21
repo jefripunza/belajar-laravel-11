@@ -47,6 +47,17 @@ jobs:
         run: |
           mv .env.example .env
 
+      - name: Manual Replace
+        run: |
+          sed -i 's#APP_ENV=#APP_ENV=${{ secrets.APP_ENV }}#g' .env
+
+          sed -i 's#DB_CONNECTION=#DB_CONNECTION=${{ secrets.DB_CONNECTION }}#g' .env
+          sed -i 's#DB_HOST=#DB_HOST=${{ secrets.DB_HOST }}#g' .env
+          sed -i 's#DB_PORT=#DB_PORT=${{ secrets.DB_PORT }}#g' .env
+          sed -i 's#DB_DATABASE=#DB_DATABASE=${{ secrets.DB_DATABASE }}#g' .env
+          sed -i 's#DB_USERNAME=#DB_USERNAME=${{ secrets.DB_USERNAME }}#g' .env
+          sed -i 's#DB_PASSWORD=#DB_PASSWORD=${{ secrets.DB_PASSWORD }}#g' .env
+
       - name: 📡 Docker Compose...
         run: |
           docker-compose pull
