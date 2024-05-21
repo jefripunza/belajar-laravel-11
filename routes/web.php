@@ -50,7 +50,6 @@ Route::get('/post/{post_slug}', function ($post_slug) use (&$posts) {
         return $post['post_slug'] == $post_slug;
     });
     return view('post', [
-        'title' => $post['title'],
         'post' => $post,
     ]);
 });
