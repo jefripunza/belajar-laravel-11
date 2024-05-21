@@ -3,7 +3,7 @@ name: 🚀 Deploy App...
 jobs:
   app-deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
-    name: 🚚 Jefripunza - NGINX Domain Management
+    name: 🚚 Jefripunza - Belajar Laravel 11
     runs-on: server-dell-jefri
     steps:
       - name: Set Time Zone, Get start datetime & Template Top
