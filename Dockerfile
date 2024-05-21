@@ -27,7 +27,7 @@ RUN mkdir ./database/sqlite
 RUN composer install --no-scripts --no-autoloader
 
 # Copy konfigurasi PHP jika ada (opsional)
-COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
+# COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 
 # Generate autoloader
 RUN composer dump-autoload --optimize
