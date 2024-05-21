@@ -21,19 +21,30 @@ WORKDIR /var/www/html
 
 # Copy aplikasi Laravel
 COPY . /var/www/html
-RUN mkdir ./database/sqlite
 
 # Install dependencies PHP menggunakan Composer
 RUN composer install --no-scripts --no-autoloader
 
 # Copy konfigurasi PHP jika ada (opsional)
-# COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
+COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 
 # Generate autoloader
 RUN composer dump-autoload --optimize
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Konfigurasi Apache
+RUN echo "<VirtualHost *:80>\n\
+    DocumentRoot /var/www/html/public\n\
+    <Directory /var/www/html/public>\n\
+        Options Indexes FollowSymLinks\n\
+        AllowOverride All\n\
+        Require all granted\n\
+    </Directory>\n\
+    ErrorLog \${APACHE_LOG_DIR}/error.log\n\
+    CustomLog \${APACHE_LOG_DIR}/access.log combined\n\
+</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
 
 # 💯 Configuration
 RUN sed -i 's#localhost#host.docker.internal#g' .env
