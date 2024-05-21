@@ -35,6 +35,9 @@ RUN composer dump-autoload --optimize
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
+# 💯 Configuration
+RUN sed -i 's#localhost#host.docker.internal#g' .env
+
 # Expose port 80
 EXPOSE 80
 

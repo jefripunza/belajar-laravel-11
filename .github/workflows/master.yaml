@@ -43,6 +43,10 @@ jobs:
       - name: 🎉 Get latest code
         uses: actions/checkout@v2
 
+      - name: Rename ENV...
+        run: |
+          mv .env.example .env
+
       - name: 📡 Docker Compose...
         run: |
           docker-compose pull

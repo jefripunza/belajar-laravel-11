@@ -9,6 +9,7 @@ services:
       - "3001:80"
     environment:
       # inject on secret...
+      - APP_NAME=Laravel
       # - DB_HOST=
       # - DB_PORT=
       # - DB_DATABASE=
