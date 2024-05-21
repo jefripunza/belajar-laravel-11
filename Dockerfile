@@ -1,27 +1,36 @@
-# Use an official PHP runtime as a parent image
+# Menggunakan image PHP 8.3.7 FPM
 FROM php:8.3.7-fpm
 
-# Set the working directory to /var/www/html
-WORKDIR /var/www/html
+# Install dependensi yang diperlukan
+RUN apt-get update && apt-get install -y \
+    git \
+    zip \
+    unzip \
+    libpq-dev \
+    libzip-dev \
+    && docker-php-ext-install pdo pdo_pgsql zip
 
-# Install any needed extensions
-RUN docker-php-ext-install pdo pdo_mysql
-
-# Install Composer globally
+# Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Supervisor for process control
-RUN apt-get update && apt-get install -y supervisor && \
-    mkdir -p /var/log/supervisor
+# Set working directory
+WORKDIR /var/www/html
 
-# Copy the application code into the container
+# Copy aplikasi Laravel
 COPY . /var/www/html
 
-# Run Composer install
-RUN composer install
+# Install dependensi PHP menggunakan Composer
+RUN composer install --no-scripts --no-autoloader
 
-# Copy the Laravel worker configuration
-COPY ./worker.conf /etc/supervisor/conf.d/
+# Copy konfigurasi PHP
+# COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 
-# Start Supervisor to manage the Laravel worker process
-CMD ["/usr/bin/supervisord", "-n"]
+# Generate autoloader
+RUN composer dump-autoload --optimize
+
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Expose port 9000 and start php-fpm server
+EXPOSE 9000
+CMD ["php-fpm"]
