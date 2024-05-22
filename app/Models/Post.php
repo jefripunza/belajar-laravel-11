@@ -44,7 +44,7 @@ class Post extends Model
         ];
     }
 
-    public static function listAll()
+    public static function paginate()
     {
         $posts = Post::join('users', 'posts.author_id', '=', 'users.id')
             ->select(

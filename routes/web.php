@@ -1,43 +1,13 @@
 <?php
 
-use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
-Route::get('/', function () {
-    return view('home', [
-        'title' => 'Home Page',
-    ]);
-});
+//-> Landing Page
+Route::get('/', [Controllers\LandingPageController::class, "home"]);
+Route::get('/posts', [Controllers\LandingPageController::class, "posts"]);
+Route::get('/post/{slug}',  [Controllers\LandingPageController::class, "post"]);
+Route::get('/about', [Controllers\LandingPageController::class, "about"]);
+Route::get('/contact', [Controllers\LandingPageController::class, "contact"]);
 
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About Page',
-        'name' => "Jefri Herdi Triyanto",
-    ]);
-});
-
-Route::get('/posts', function () {
-    return view('posts', [
-        'title' => 'Posts Page',
-        'posts' => Post::listAll(),
-    ]);
-});
-
-Route::get('/post/{post_slug}', function ($post_slug) {
-    return view('post', [
-        'post' => Post::findBySlug($post_slug),
-    ]);
-});
-
-Route::get('/contact', function () {
-    $info = [
-        "phone_number" => "082214252455",
-        "email" => "jefriherditriyanto@gmail.com",
-        "instagram" => "@jefripunza",
-        "linkedin" => "https://www.linkedin.com/in/jefri-herdi-triyanto-ba76a8106/",
-    ];
-    return view('contact', [
-        'title' => 'Contact Page',
-        'info' => $info,
-    ]);
-});
+//-> Auth Page
