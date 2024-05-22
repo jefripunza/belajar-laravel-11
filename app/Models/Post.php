@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Arr;
+
 class Post
 {
     public static function all()
@@ -24,5 +26,15 @@ class Post
                 "created_at" => "27 Juli 1992",
             ],
         ];
+    }
+
+    public static function findBySlug($post_slug)
+    {
+        // $post = collect(static::all())->firstWhere('post_slug', $post_slug);
+        // $post = Arr::first(static::all(), function ($post) use ($post_slug) {
+        //     return $post['post_slug'] == $post_slug;
+        // });
+        $post = Arr::first(static::all(), fn ($post) => $post['post_slug'] == $post_slug);
+        return $post;
     }
 }

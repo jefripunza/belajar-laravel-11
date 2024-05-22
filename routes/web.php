@@ -25,12 +25,8 @@ Route::get('/posts', function () {
 });
 
 Route::get('/post/{post_slug}', function ($post_slug) {
-    // $post = collect($posts)->firstWhere('post_slug', $post_slug);
-    $post = Arr::first(Post::all(), function ($post) use ($post_slug) {
-        return $post['post_slug'] == $post_slug;
-    });
     return view('post', [
-        'post' => $post,
+        'post' => Post::findBySlug($post_slug),
     ]);
 });
 

@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Halaman Home</title>
 
-    @vite('resources/css/app.css')
+    @if (app()->environment('local'))
+        @vite('resources/css/app.css')
+    @else
+        <link rel="stylesheet" href="{{ asset('build/assets/app-BTEsg2y2.css') }}">
+        <script defer src="{{ asset('build/assets/app-C1-XIpUa.js') }}"></script>
+    @endif
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
