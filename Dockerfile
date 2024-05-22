@@ -1,3 +1,17 @@
+# --- 🛠️ nodejs --- #
+FROM node:18-alpine as fe_builder
+LABEL org.opencontainers.image.authors="jefriherditriyanto@gmail.com"
+
+RUN mkdir /fe_builder
+WORKDIR /fe_builder
+COPY . .
+
+#-> ⚙️ Setup Clustering...
+RUN npm install
+RUN npm run build
+
+
+
 # Menggunakan image PHP dengan Apache
 FROM php:8.3.7-apache
 
@@ -24,6 +38,7 @@ WORKDIR /var/www/html
 
 # Copy aplikasi Laravel
 COPY . /var/www/html
+COPY --from=fe_builder /fe_builder/public/build /var/www/html/public/build
 
 # Install dependencies PHP menggunakan Composer
 RUN composer install --no-scripts --no-autoloader
