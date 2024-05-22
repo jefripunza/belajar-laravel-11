@@ -2,22 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
-
-function createSlug($string)
-{
-    // Lowercase the string
-    $slug = strtolower($string);
-    // Replace spaces with hyphens
-    $slug = preg_replace('/\s+/', '-', $slug);
-    // Remove all non-alphanumeric characters except hyphens
-    $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
-    return $slug;
-}
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
+    use HasFactory;
+
     /**
      * The table associated with the model.
      *
@@ -45,7 +38,7 @@ class Post extends Model
             'title' => $post->title,
             'body' => $post->body,
             'author' => $post->author,
-            'author_slug' => createSlug($post->author),
+            'author_slug' => Str::slug($post->author),
             'created_at' => $post->created_at->diffForHumans(),
             // 'created_at' => Carbon::parse($post->created_at)->format('d F Y'),
         ];
