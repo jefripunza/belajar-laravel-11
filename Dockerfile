@@ -66,6 +66,10 @@ RUN echo "<VirtualHost *:80>\n\
 
 # 💯 Configuration
 RUN sed -i 's#localhost#host.docker.internal#g' .env
+RUN sed -i 's#127.0.0.1#host.docker.internal#g' .env
+
+RUN php artisan migrate
+RUN php artisan db:seed
 
 # Expose port 80
 EXPOSE 80

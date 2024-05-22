@@ -19,7 +19,7 @@ Route::get('/about', function () {
 Route::get('/posts', function () {
     return view('posts', [
         'title' => 'Posts Page',
-        'posts' => Post::all(),
+        'posts' => Post::listAll(),
     ]);
 });
 

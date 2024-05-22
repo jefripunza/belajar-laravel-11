@@ -2,30 +2,68 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Arr;
+use Illuminate\Support\Carbon;
+use Illuminate\Database\Eloquent\Model;
 
-class Post
+function createSlug($string)
 {
-    public static function all()
+    // Lowercase the string
+    $slug = strtolower($string);
+    // Replace spaces with hyphens
+    $slug = preg_replace('/\s+/', '-', $slug);
+    // Remove all non-alphanumeric characters except hyphens
+    $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
+    return $slug;
+}
+
+class Post extends Model
+{
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = "posts";
+    protected $primaryKey = "id";
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'slug',
+        'title',
+        'body',
+        'author_id',
+    ];
+
+    public static function formatData($post)
     {
         return [
-            [
-                "post_slug" => "belajar-laravel-dengan-cepat",
-                "title" => "Belajar Laravel dengan Cepat?",
-                "body" => "saya sedang mencoba untuk belajar laravel secepat mungkin agar bisa menembus batas 7.5 JT, demi anak bojo bree",
-                "author" => "Jefri Herdi Triyanto",
-                "author_slug" => "jefri-herdi-triyanto",
-                "created_at" => "14 Januari 1996",
-            ],
-            [
-                "post_slug" => "mampukah-menerima-cobaan-ini",
-                "title" => "Mampukah Menerima Cobaan Ini?",
-                "body" => "ketika saya niat ingsun, insya allah barokah lancar. Amiinnn....",
-                "author" => "Watini",
-                "author_slug" => "watini",
-                "created_at" => "27 Juli 1992",
-            ],
+            'post_slug' => $post->post_slug,
+            'title' => $post->title,
+            'body' => $post->body,
+            'author' => $post->author,
+            'author_slug' => createSlug($post->author),
+            'created_at' => $post->created_at->diffForHumans(),
+            // 'created_at' => Carbon::parse($post->created_at)->format('d F Y'),
         ];
+    }
+
+    public static function listAll()
+    {
+        $posts = Post::join('users', 'posts.author_id', '=', 'users.id')
+            ->select(
+                'posts.slug as post_slug',
+                'posts.title',
+                'posts.body',
+                'users.name as author',
+                'posts.created_at'
+            )
+            ->get()
+            ->map(fn ($post) => static::formatData($post));
+        return $posts;
     }
 
     public static function findBySlug($post_slug)
@@ -34,7 +72,20 @@ class Post
         // $post = Arr::first(static::all(), function ($post) use ($post_slug) {
         //     return $post['post_slug'] == $post_slug;
         // });
-        $post = Arr::first(static::all(), fn ($post) => $post['post_slug'] == $post_slug);
-        return $post;
+        // $post = Arr::first(static::all(), fn ($post) => $post['post_slug'] == $post_slug);
+        $post = Post::join('users', 'posts.author_id', '=', 'users.id')
+            ->where('posts.slug', $post_slug)
+            ->select(
+                'posts.slug as post_slug',
+                'posts.title',
+                'posts.body',
+                'users.name as author',
+                'posts.created_at'
+            )
+            ->first();
+        if ($post) {
+            return static::formatData($post);
+        }
+        return null;
     }
 }
