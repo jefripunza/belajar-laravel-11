@@ -30,4 +30,5 @@ Route::post('register', [Controllers\AuthController::class, 'register'])->name('
 Route::get('activation/{code}', [Controllers\AuthController::class, 'activateAccount'])->name('activation');
 
 //-> Logged Page
-Route::get('portfolio', [Controllers\UserController::class, 'portfolio'])->name('portfolio');
+Route::get('portfolio', [Controllers\PortfolioController::class, 'manage'])->name('portfolio');
+Route::get('portfolio/{slug}', [Controllers\PortfolioController::class, 'public']);

@@ -14,7 +14,6 @@ class LandingController extends Controller
         ]);
     }
 
-
     public function posts(Request $request)
     {
         return view('landing.posts', [
@@ -22,7 +21,6 @@ class LandingController extends Controller
             'posts' => Post::paginate(),
         ]);
     }
-
 
     public function post(string $slug)
     {

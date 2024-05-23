@@ -7,15 +7,6 @@ use Illuminate\Support\Carbon;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function portfolio()
-    {
-        return view('user.portfolio', [
-            'title' => "User Page",
-        ]);
-    }
 
     /**
      * Show the form for creating a new resource.

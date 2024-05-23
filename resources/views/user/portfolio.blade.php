@@ -3,8 +3,7 @@
 @endphp
 
 <x-layout.user>
-    <x-slot:title>{{ $title }}</x-slot:title>
-    <x-slot:title_form>User Page</x-slot:title_form>
+    <x-slot:title>Portfolio | {{ Auth::user()->first_name ??= '' }} {{ Auth::user()->last_name ??= '' }}</x-slot:title>
 
     <div class="bg-gray-100">
         <div class="container mx-auto my-5 p-5">
