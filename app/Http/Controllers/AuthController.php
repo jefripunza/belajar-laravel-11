@@ -6,9 +6,9 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Mail\ActivationEmail;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Redirect;
 
 class AuthController extends Controller
 {
@@ -33,9 +33,6 @@ class AuthController extends Controller
                 'activation_code' => $activation_code,
             ]);
 
-            // // Auto-login user setelah registrasi
-            // auth()->login($user);
-
             // Kirim email aktivasi
             Mail::to($user->email)->send(new ActivationEmail($user));
 
@@ -52,7 +49,7 @@ class AuthController extends Controller
     {
         $user = User::where('activation_code', $code)->first();
         if (!$user) {
-            return redirect()->route('home')->with('error', 'Invalid activation code.');
+            return redirect()->route('login')->with('error', 'Invalid activation code.');
         }
 
         // Aktifkan akun
@@ -70,7 +67,19 @@ class AuthController extends Controller
         if ($method == "GET") {
             //
         } else {
-            return redirect('/');
+            $request->validate([
+                'email' => 'required|email',
+                'password' => 'required',
+            ]);
+            $credentials = $request->only('email', 'password');
+            $user = User::where('email', $credentials['email'])->first();
+            if ($user && Hash::check($credentials['password'], $user->password)) {
+                // join ke sini semua untuk kebutuhan get data...
+                Auth::login($user);
+                return redirect()->intended('/portfolio');
+            } else {
+                return back()->withErrors(['email' => 'Invalid email or password.'])->withInput($request->only('email'));
+            }
         }
         return view('auth.login', [
             'title' => $title,
@@ -81,7 +90,8 @@ class AuthController extends Controller
     {
         $method = $request->method();
         if ($method == "GET") {
-            // 
+            Auth::logout();
+            return redirect('/login');
         } else {
             return redirect('/');
         }

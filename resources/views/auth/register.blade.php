@@ -110,7 +110,19 @@
                 @input="validateConfirmationPassword">
             <p class="text-red-500 text-xs italic" x-html="confirmPasswordErrors"></p>
         </div>
+        <div class="mb-9 text-green-500 text-xs italic">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
         <div class="mb-9 text-red-500 text-xs italic">
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
             @if ($errors->any())
                 <div>
                     <ul>

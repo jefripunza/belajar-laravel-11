@@ -53,6 +53,29 @@
                 required x-model="password" @input="validatePassword">
             <p class="text-red-500 text-xs italic" x-html="passwordErrors"></p>
         </div>
+        <div class="mb-9 text-green-500 text-xs italic">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+        <div class="mb-9 text-red-500 text-xs italic">
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @if ($errors->any())
+                <div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
         <div class="flex items-center justify-between">
             <button
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

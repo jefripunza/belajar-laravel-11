@@ -13,12 +13,22 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean("is_admin")->default(false);
+
             $table->string('activation_code')->nullable(); // ini untuk activation code
             $table->timestamp('activation_at')->nullable();
+
+            $table->string('first_name');
+            $table->string('last_name')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('whatsapp_number')->nullable();
+            $table->string('current_address')->nullable();
+            $table->string('permanent_address')->nullable();
+            $table->date('birthday_date')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
         });

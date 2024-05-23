@@ -1,0 +1,2124 @@
+{
+    "list": [
+        {
+            "name": ".NET core",
+            "slug": "net-core",
+            "file": ".NET-core.svg"
+        },
+        {
+            "name": ".NET",
+            "slug": "net",
+            "file": ".NET.svg"
+        },
+        {
+            "name": "AArch64",
+            "slug": "aarch64",
+            "file": "AArch64.svg"
+        },
+        {
+            "name": "APL",
+            "slug": "apl",
+            "file": "APL.svg"
+        },
+        {
+            "name": "AWS",
+            "slug": "aws",
+            "file": "AWS.svg"
+        },
+        {
+            "name": "Adobe Commerce (Magneto)",
+            "slug": "adobe-commerce-magneto",
+            "file": "Adobe-Commerce-(Magneto).svg"
+        },
+        {
+            "name": "Adobe Illustrator",
+            "slug": "adobe-illustrator",
+            "file": "Adobe-Illustrator.svg"
+        },
+        {
+            "name": "Adobe Photoshop",
+            "slug": "adobe-photoshop",
+            "file": "Adobe-Photoshop.svg"
+        },
+        {
+            "name": "Adobe Premiere Pro",
+            "slug": "adobe-premiere-pro",
+            "file": "Adobe-Premiere-Pro.svg"
+        },
+        {
+            "name": "Adobe XD",
+            "slug": "adobe-xd",
+            "file": "Adobe-XD.svg"
+        },
+        {
+            "name": "AdonisJS",
+            "slug": "adonisjs",
+            "file": "AdonisJS.svg"
+        },
+        {
+            "name": "After Effects",
+            "slug": "after-effects",
+            "file": "After-Effects.svg"
+        },
+        {
+            "name": "Akka",
+            "slug": "akka",
+            "file": "Akka.svg"
+        },
+        {
+            "name": "Algolia",
+            "slug": "algolia",
+            "file": "Algolia.svg"
+        },
+        {
+            "name": "Alpine.js",
+            "slug": "alpinejs",
+            "file": "Alpine.js.svg"
+        },
+        {
+            "name": "Anaconda",
+            "slug": "anaconda",
+            "file": "Anaconda.svg"
+        },
+        {
+            "name": "Android Studio",
+            "slug": "android-studio",
+            "file": "Android-Studio.svg"
+        },
+        {
+            "name": "Android",
+            "slug": "android",
+            "file": "Android.svg"
+        },
+        {
+            "name": "Angular",
+            "slug": "angular",
+            "file": "Angular.svg"
+        },
+        {
+            "name": "AngularJS",
+            "slug": "angularjs",
+            "file": "AngularJS.svg"
+        },
+        {
+            "name": "Ansible",
+            "slug": "ansible",
+            "file": "Ansible.svg"
+        },
+        {
+            "name": "Ant Design",
+            "slug": "ant-design",
+            "file": "Ant-Design.svg"
+        },
+        {
+            "name": "Apache Airflow",
+            "slug": "apache-airflow",
+            "file": "Apache-Airflow.svg"
+        },
+        {
+            "name": "Apache Cassandra",
+            "slug": "apache-cassandra",
+            "file": "Apache-Cassandra.svg"
+        },
+        {
+            "name": "Apache Groovy",
+            "slug": "apache-groovy",
+            "file": "Apache-Groovy.svg"
+        },
+        {
+            "name": "Apache Hadoop",
+            "slug": "apache-hadoop",
+            "file": "Apache-Hadoop.svg"
+        },
+        {
+            "name": "Apache Kafka",
+            "slug": "apache-kafka",
+            "file": "Apache-Kafka.svg"
+        },
+        {
+            "name": "Apache Maven",
+            "slug": "apache-maven",
+            "file": "Apache-Maven.svg"
+        },
+        {
+            "name": "Apache Spark",
+            "slug": "apache-spark",
+            "file": "Apache-Spark.svg"
+        },
+        {
+            "name": "Apache Subversion",
+            "slug": "apache-subversion",
+            "file": "Apache-Subversion.svg"
+        },
+        {
+            "name": "Apache Tomcat",
+            "slug": "apache-tomcat",
+            "file": "Apache-Tomcat.svg"
+        },
+        {
+            "name": "Apache",
+            "slug": "apache",
+            "file": "Apache.svg"
+        },
+        {
+            "name": "Appcelerator",
+            "slug": "appcelerator",
+            "file": "Appcelerator.svg"
+        },
+        {
+            "name": "Apple Safari",
+            "slug": "apple-safari",
+            "file": "Apple-Safari.svg"
+        },
+        {
+            "name": "Apple",
+            "slug": "apple",
+            "file": "Apple.svg"
+        },
+        {
+            "name": "Appwrite",
+            "slug": "appwrite",
+            "file": "Appwrite.svg"
+        },
+        {
+            "name": "Arch Linux",
+            "slug": "arch-linux",
+            "file": "Arch-Linux.svg"
+        },
+        {
+            "name": "Arduino",
+            "slug": "arduino",
+            "file": "Arduino.svg"
+        },
+        {
+            "name": "Argo CD",
+            "slug": "argo-cd",
+            "file": "Argo-CD.svg"
+        },
+        {
+            "name": "Astro",
+            "slug": "astro",
+            "file": "Astro.svg"
+        },
+        {
+            "name": "Atom",
+            "slug": "atom",
+            "file": "Atom.svg"
+        },
+        {
+            "name": "Autodesk Maya",
+            "slug": "autodesk-maya",
+            "file": "Autodesk-Maya.svg"
+        },
+        {
+            "name": "Autodesk ShotGrid",
+            "slug": "autodesk-shotgrid",
+            "file": "Autodesk-ShotGrid.svg"
+        },
+        {
+            "name": "Awk",
+            "slug": "awk",
+            "file": "Awk.svg"
+        },
+        {
+            "name": "Azios",
+            "slug": "azios",
+            "file": "Azios.svg"
+        },
+        {
+            "name": "Azure Devops",
+            "slug": "azure-devops",
+            "file": "Azure-Devops.svg"
+        },
+        {
+            "name": "Azure SQL Database",
+            "slug": "azure-sql-database",
+            "file": "Azure-SQL-Database.svg"
+        },
+        {
+            "name": "Azure",
+            "slug": "azure",
+            "file": "Azure.svg"
+        },
+        {
+            "name": "Babel",
+            "slug": "babel",
+            "file": "Babel.svg"
+        },
+        {
+            "name": "Backbone.js",
+            "slug": "backbonejs",
+            "file": "Backbone.js.svg"
+        },
+        {
+            "name": "Ballerina",
+            "slug": "ballerina",
+            "file": "Ballerina.svg"
+        },
+        {
+            "name": "Bamboo",
+            "slug": "bamboo",
+            "file": "Bamboo.svg"
+        },
+        {
+            "name": "Bash",
+            "slug": "bash",
+            "file": "Bash.svg"
+        },
+        {
+            "name": "Behance",
+            "slug": "behance",
+            "file": "Behance.svg"
+        },
+        {
+            "name": "BitBucket",
+            "slug": "bitbucket",
+            "file": "BitBucket.svg"
+        },
+        {
+            "name": "Blender",
+            "slug": "blender",
+            "file": "Blender.svg"
+        },
+        {
+            "name": "Bootstrap",
+            "slug": "bootstrap",
+            "file": "Bootstrap.svg"
+        },
+        {
+            "name": "Bower",
+            "slug": "bower",
+            "file": "Bower.svg"
+        },
+        {
+            "name": "BrowserStack",
+            "slug": "browserstack",
+            "file": "BrowserStack.svg"
+        },
+        {
+            "name": "Bulma",
+            "slug": "bulma",
+            "file": "Bulma.svg"
+        },
+        {
+            "name": "Bun",
+            "slug": "bun",
+            "file": "Bun.svg"
+        },
+        {
+            "name": "C# (CSharp)",
+            "slug": "c-csharp",
+            "file": "C#-(CSharp).svg"
+        },
+        {
+            "name": "C++ (CPlusPlus)",
+            "slug": "c-cplusplus",
+            "file": "C++-(CPlusPlus).svg"
+        },
+        {
+            "name": "C",
+            "slug": "c",
+            "file": "C.svg"
+        },
+        {
+            "name": "CLion",
+            "slug": "clion",
+            "file": "CLion.svg"
+        },
+        {
+            "name": "CMake",
+            "slug": "cmake",
+            "file": "CMake.svg"
+        },
+        {
+            "name": "CSS3",
+            "slug": "css3",
+            "file": "CSS3.svg"
+        },
+        {
+            "name": "Cairo Graphics",
+            "slug": "cairo-graphics",
+            "file": "Cairo-Graphics.svg"
+        },
+        {
+            "name": "CakePHP",
+            "slug": "cakephp",
+            "file": "CakePHP.svg"
+        },
+        {
+            "name": "Canva",
+            "slug": "canva",
+            "file": "Canva.svg"
+        },
+        {
+            "name": "Capacitor",
+            "slug": "capacitor",
+            "file": "Capacitor.svg"
+        },
+        {
+            "name": "CentOS",
+            "slug": "centos",
+            "file": "CentOS.svg"
+        },
+        {
+            "name": "Chrome",
+            "slug": "chrome",
+            "file": "Chrome.svg"
+        },
+        {
+            "name": "CircleCI",
+            "slug": "circleci",
+            "file": "CircleCI.svg"
+        },
+        {
+            "name": "Clarity",
+            "slug": "clarity",
+            "file": "Clarity.svg"
+        },
+        {
+            "name": "Clojure",
+            "slug": "clojure",
+            "file": "Clojure.svg"
+        },
+        {
+            "name": "ClojureScript",
+            "slug": "clojurescript",
+            "file": "ClojureScript.svg"
+        },
+        {
+            "name": "Cloudflare Workers",
+            "slug": "cloudflare-workers",
+            "file": "Cloudflare-Workers.svg"
+        },
+        {
+            "name": "Cloudflare",
+            "slug": "cloudflare",
+            "file": "Cloudflare.svg"
+        },
+        {
+            "name": "CodeIgniter",
+            "slug": "codeigniter",
+            "file": "CodeIgniter.svg"
+        },
+        {
+            "name": "CodePen",
+            "slug": "codepen",
+            "file": "CodePen.svg"
+        },
+        {
+            "name": "Codeac",
+            "slug": "codeac",
+            "file": "Codeac.svg"
+        },
+        {
+            "name": "Codecov",
+            "slug": "codecov",
+            "file": "Codecov.svg"
+        },
+        {
+            "name": "CoffeeScript",
+            "slug": "coffeescript",
+            "file": "CoffeeScript.svg"
+        },
+        {
+            "name": "Composer",
+            "slug": "composer",
+            "file": "Composer.svg"
+        },
+        {
+            "name": "Confluence",
+            "slug": "confluence",
+            "file": "Confluence.svg"
+        },
+        {
+            "name": "Consul",
+            "slug": "consul",
+            "file": "Consul.svg"
+        },
+        {
+            "name": "Contao",
+            "slug": "contao",
+            "file": "Contao.svg"
+        },
+        {
+            "name": "Core js",
+            "slug": "core-js",
+            "file": "Core-js.svg"
+        },
+        {
+            "name": "Cosmos BD",
+            "slug": "cosmos-bd",
+            "file": "Cosmos-BD.svg"
+        },
+        {
+            "name": "CouchDB",
+            "slug": "couchdb",
+            "file": "CouchDB.svg"
+        },
+        {
+            "name": "Crystal",
+            "slug": "crystal",
+            "file": "Crystal.svg"
+        },
+        {
+            "name": "Cucumber",
+            "slug": "cucumber",
+            "file": "Cucumber.svg"
+        },
+        {
+            "name": "Cypress",
+            "slug": "cypress",
+            "file": "Cypress.svg"
+        },
+        {
+            "name": "D3.js",
+            "slug": "d3js",
+            "file": "D3.js.svg"
+        },
+        {
+            "name": "DBeaver",
+            "slug": "dbeaver",
+            "file": "DBeaver.svg"
+        },
+        {
+            "name": "Dart",
+            "slug": "dart",
+            "file": "Dart.svg"
+        },
+        {
+            "name": "DataGrip",
+            "slug": "datagrip",
+            "file": "DataGrip.svg"
+        },
+        {
+            "name": "DataSpell",
+            "slug": "dataspell",
+            "file": "DataSpell.svg"
+        },
+        {
+            "name": "Debian",
+            "slug": "debian",
+            "file": "Debian.svg"
+        },
+        {
+            "name": "Deno",
+            "slug": "deno",
+            "file": "Deno.svg"
+        },
+        {
+            "name": "Devicon",
+            "slug": "devicon",
+            "file": "Devicon.svg"
+        },
+        {
+            "name": "Digital Ocean",
+            "slug": "digital-ocean",
+            "file": "Digital-Ocean.svg"
+        },
+        {
+            "name": "Discord.js",
+            "slug": "discordjs",
+            "file": "Discord.js.svg"
+        },
+        {
+            "name": "Django REST",
+            "slug": "django-rest",
+            "file": "Django-REST.svg"
+        },
+        {
+            "name": "Django",
+            "slug": "django",
+            "file": "Django.svg"
+        },
+        {
+            "name": "Docker",
+            "slug": "docker",
+            "file": "Docker.svg"
+        },
+        {
+            "name": "Doctrine",
+            "slug": "doctrine",
+            "file": "Doctrine.svg"
+        },
+        {
+            "name": "Dropwizard",
+            "slug": "dropwizard",
+            "file": "Dropwizard.svg"
+        },
+        {
+            "name": "Drupal",
+            "slug": "drupal",
+            "file": "Drupal.svg"
+        },
+        {
+            "name": "ESLint",
+            "slug": "eslint",
+            "file": "ESLint.svg"
+        },
+        {
+            "name": "Eclipse Ceylon",
+            "slug": "eclipse-ceylon",
+            "file": "Eclipse-Ceylon.svg"
+        },
+        {
+            "name": "Eclipse IDE",
+            "slug": "eclipse-ide",
+            "file": "Eclipse-IDE.svg"
+        },
+        {
+            "name": "Eclipse Vert.x",
+            "slug": "eclipse-vertx",
+            "file": "Eclipse-Vert.x.svg"
+        },
+        {
+            "name": "Elastic Beats",
+            "slug": "elastic-beats",
+            "file": "Elastic-Beats.svg"
+        },
+        {
+            "name": "Elastic Search",
+            "slug": "elastic-search",
+            "file": "Elastic-Search.svg"
+        },
+        {
+            "name": "Electron",
+            "slug": "electron",
+            "file": "Electron.svg"
+        },
+        {
+            "name": "Eleventy (11ty)",
+            "slug": "eleventy-11ty",
+            "file": "Eleventy-(11ty).svg"
+        },
+        {
+            "name": "Elixir",
+            "slug": "elixir",
+            "file": "Elixir.svg"
+        },
+        {
+            "name": "Elm",
+            "slug": "elm",
+            "file": "Elm.svg"
+        },
+        {
+            "name": "Embedded C",
+            "slug": "embedded-c",
+            "file": "Embedded-C.svg"
+        },
+        {
+            "name": "Ember.js",
+            "slug": "emberjs",
+            "file": "Ember.js.svg"
+        },
+        {
+            "name": "Envoy",
+            "slug": "envoy",
+            "file": "Envoy.svg"
+        },
+        {
+            "name": "Erlang",
+            "slug": "erlang",
+            "file": "Erlang.svg"
+        },
+        {
+            "name": "Express",
+            "slug": "express",
+            "file": "Express.svg"
+        },
+        {
+            "name": "FSharp (F#)",
+            "slug": "fsharp-f",
+            "file": "FSharp-(F#).svg"
+        },
+        {
+            "name": "Facebook",
+            "slug": "facebook",
+            "file": "Facebook.svg"
+        },
+        {
+            "name": "FastAPI",
+            "slug": "fastapi",
+            "file": "FastAPI.svg"
+        },
+        {
+            "name": "Fastify",
+            "slug": "fastify",
+            "file": "Fastify.svg"
+        },
+        {
+            "name": "Fauna",
+            "slug": "fauna",
+            "file": "Fauna.svg"
+        },
+        {
+            "name": "Feathers",
+            "slug": "feathers",
+            "file": "Feathers.svg"
+        },
+        {
+            "name": "Fedora",
+            "slug": "fedora",
+            "file": "Fedora.svg"
+        },
+        {
+            "name": "Figma",
+            "slug": "figma",
+            "file": "Figma.svg"
+        },
+        {
+            "name": "FileZilla",
+            "slug": "filezilla",
+            "file": "FileZilla.svg"
+        },
+        {
+            "name": "Firebase",
+            "slug": "firebase",
+            "file": "Firebase.svg"
+        },
+        {
+            "name": "Firefox",
+            "slug": "firefox",
+            "file": "Firefox.svg"
+        },
+        {
+            "name": "Flask",
+            "slug": "flask",
+            "file": "Flask.svg"
+        },
+        {
+            "name": "Flutter",
+            "slug": "flutter",
+            "file": "Flutter.svg"
+        },
+        {
+            "name": "Fortran",
+            "slug": "fortran",
+            "file": "Fortran.svg"
+        },
+        {
+            "name": "Foundation",
+            "slug": "foundation",
+            "file": "Foundation.svg"
+        },
+        {
+            "name": "GCC",
+            "slug": "gcc",
+            "file": "GCC.svg"
+        },
+        {
+            "name": "GIMP",
+            "slug": "gimp",
+            "file": "GIMP.svg"
+        },
+        {
+            "name": "GNU Emacs",
+            "slug": "gnu-emacs",
+            "file": "GNU-Emacs.svg"
+        },
+        {
+            "name": "Gatling",
+            "slug": "gatling",
+            "file": "Gatling.svg"
+        },
+        {
+            "name": "Gatsby",
+            "slug": "gatsby",
+            "file": "Gatsby.svg"
+        },
+        {
+            "name": "Gazebo",
+            "slug": "gazebo",
+            "file": "Gazebo.svg"
+        },
+        {
+            "name": "Gentoo",
+            "slug": "gentoo",
+            "file": "Gentoo.svg"
+        },
+        {
+            "name": "Ghost",
+            "slug": "ghost",
+            "file": "Ghost.svg"
+        },
+        {
+            "name": "Git",
+            "slug": "git",
+            "file": "Git.svg"
+        },
+        {
+            "name": "GitBook",
+            "slug": "gitbook",
+            "file": "GitBook.svg"
+        },
+        {
+            "name": "GitHub Actions",
+            "slug": "github-actions",
+            "file": "GitHub-Actions.svg"
+        },
+        {
+            "name": "GitHub Codespaces",
+            "slug": "github-codespaces",
+            "file": "GitHub-Codespaces.svg"
+        },
+        {
+            "name": "GitHub",
+            "slug": "github",
+            "file": "GitHub.svg"
+        },
+        {
+            "name": "GitLab",
+            "slug": "gitlab",
+            "file": "GitLab.svg"
+        },
+        {
+            "name": "Gitpod",
+            "slug": "gitpod",
+            "file": "Gitpod.svg"
+        },
+        {
+            "name": "Gitter",
+            "slug": "gitter",
+            "file": "Gitter.svg"
+        },
+        {
+            "name": "Go",
+            "slug": "go",
+            "file": "Go.svg"
+        },
+        {
+            "name": "GoLand",
+            "slug": "goland",
+            "file": "GoLand.svg"
+        },
+        {
+            "name": "Godot Engine",
+            "slug": "godot-engine",
+            "file": "Godot-Engine.svg"
+        },
+        {
+            "name": "Google Cloud",
+            "slug": "google-cloud",
+            "file": "Google-Cloud.svg"
+        },
+        {
+            "name": "Google",
+            "slug": "google",
+            "file": "Google.svg"
+        },
+        {
+            "name": "Gradle",
+            "slug": "gradle",
+            "file": "Gradle.svg"
+        },
+        {
+            "name": "Grafana",
+            "slug": "grafana",
+            "file": "Grafana.svg"
+        },
+        {
+            "name": "Grails",
+            "slug": "grails",
+            "file": "Grails.svg"
+        },
+        {
+            "name": "GraphQL",
+            "slug": "graphql",
+            "file": "GraphQL.svg"
+        },
+        {
+            "name": "Grunt.js",
+            "slug": "gruntjs",
+            "file": "Grunt.js.svg"
+        },
+        {
+            "name": "Gulp.js",
+            "slug": "gulpjs",
+            "file": "Gulp.js.svg"
+        },
+        {
+            "name": "HTML5",
+            "slug": "html5",
+            "file": "HTML5.svg"
+        },
+        {
+            "name": "Handlebars",
+            "slug": "handlebars",
+            "file": "Handlebars.svg"
+        },
+        {
+            "name": "Hardhat",
+            "slug": "hardhat",
+            "file": "Hardhat.svg"
+        },
+        {
+            "name": "Harvester",
+            "slug": "harvester",
+            "file": "Harvester.svg"
+        },
+        {
+            "name": "HashiCorp Terraform",
+            "slug": "hashicorp-terraform",
+            "file": "HashiCorp-Terraform.svg"
+        },
+        {
+            "name": "HashiCorp Vagrant",
+            "slug": "hashicorp-vagrant",
+            "file": "HashiCorp-Vagrant.svg"
+        },
+        {
+            "name": "HashiCorp Vault",
+            "slug": "hashicorp-vault",
+            "file": "HashiCorp-Vault.svg"
+        },
+        {
+            "name": "Haskell",
+            "slug": "haskell",
+            "file": "Haskell.svg"
+        },
+        {
+            "name": "Haxe",
+            "slug": "haxe",
+            "file": "Haxe.svg"
+        },
+        {
+            "name": "Helm",
+            "slug": "helm",
+            "file": "Helm.svg"
+        },
+        {
+            "name": "Heroku",
+            "slug": "heroku",
+            "file": "Heroku.svg"
+        },
+        {
+            "name": "Hibernate",
+            "slug": "hibernate",
+            "file": "Hibernate.svg"
+        },
+        {
+            "name": "Homebrew",
+            "slug": "homebrew",
+            "file": "Homebrew.svg"
+        },
+        {
+            "name": "Hugo",
+            "slug": "hugo",
+            "file": "Hugo.svg"
+        },
+        {
+            "name": "IBM SPSS Statistics",
+            "slug": "ibm-spss-statistics",
+            "file": "IBM-SPSS-Statistics.svg"
+        },
+        {
+            "name": "IFTTT",
+            "slug": "ifttt",
+            "file": "IFTTT.svg"
+        },
+        {
+            "name": "InfluxDB",
+            "slug": "influxdb",
+            "file": "InfluxDB.svg"
+        },
+        {
+            "name": "Inkscape ",
+            "slug": "inkscape-",
+            "file": "Inkscape-.svg"
+        },
+        {
+            "name": "Insomnia",
+            "slug": "insomnia",
+            "file": "Insomnia.svg"
+        },
+        {
+            "name": "IntelliJ IDEA",
+            "slug": "intellij-idea",
+            "file": "IntelliJ-IDEA.svg"
+        },
+        {
+            "name": "Internet Explorer 10 (ie10)",
+            "slug": "internet-explorer-10-ie10",
+            "file": "Internet-Explorer-10-(ie10).svg"
+        },
+        {
+            "name": "Ionic",
+            "slug": "ionic",
+            "file": "Ionic.svg"
+        },
+        {
+            "name": "JSON",
+            "slug": "json",
+            "file": "JSON.svg"
+        },
+        {
+            "name": "JUnit",
+            "slug": "junit",
+            "file": "JUnit.svg"
+        },
+        {
+            "name": "Jaeger Tracing",
+            "slug": "jaeger-tracing",
+            "file": "Jaeger-Tracing.svg"
+        },
+        {
+            "name": "Jamstack",
+            "slug": "jamstack",
+            "file": "Jamstack.svg"
+        },
+        {
+            "name": "Jasmine",
+            "slug": "jasmine",
+            "file": "Jasmine.svg"
+        },
+        {
+            "name": "Java",
+            "slug": "java",
+            "file": "Java.svg"
+        },
+        {
+            "name": "JavaScript",
+            "slug": "javascript",
+            "file": "JavaScript.svg"
+        },
+        {
+            "name": "Jeet",
+            "slug": "jeet",
+            "file": "Jeet.svg"
+        },
+        {
+            "name": "Jekyll",
+            "slug": "jekyll",
+            "file": "Jekyll.svg"
+        },
+        {
+            "name": "Jenkins",
+            "slug": "jenkins",
+            "file": "Jenkins.svg"
+        },
+        {
+            "name": "Jest",
+            "slug": "jest",
+            "file": "Jest.svg"
+        },
+        {
+            "name": "JetBrains",
+            "slug": "jetbrains",
+            "file": "JetBrains.svg"
+        },
+        {
+            "name": "Jira Align",
+            "slug": "jira-align",
+            "file": "Jira-Align.svg"
+        },
+        {
+            "name": "Jira",
+            "slug": "jira",
+            "file": "Jira.svg"
+        },
+        {
+            "name": "Jule",
+            "slug": "jule",
+            "file": "Jule.svg"
+        },
+        {
+            "name": "Julia",
+            "slug": "julia",
+            "file": "Julia.svg"
+        },
+        {
+            "name": "Jupyter",
+            "slug": "jupyter",
+            "file": "Jupyter.svg"
+        },
+        {
+            "name": "K3OS",
+            "slug": "k3os",
+            "file": "K3OS.svg"
+        },
+        {
+            "name": "K3s",
+            "slug": "k3s",
+            "file": "K3s.svg"
+        },
+        {
+            "name": "Kaggle",
+            "slug": "kaggle",
+            "file": "Kaggle.svg"
+        },
+        {
+            "name": "Karate Labs",
+            "slug": "karate-labs",
+            "file": "Karate-Labs.svg"
+        },
+        {
+            "name": "Karma",
+            "slug": "karma",
+            "file": "Karma.svg"
+        },
+        {
+            "name": "Keras",
+            "slug": "keras",
+            "file": "Keras.svg"
+        },
+        {
+            "name": "Kibana",
+            "slug": "kibana",
+            "file": "Kibana.svg"
+        },
+        {
+            "name": "Knex.js",
+            "slug": "knexjs",
+            "file": "Knex.js.svg"
+        },
+        {
+            "name": "Knockout",
+            "slug": "knockout",
+            "file": "Knockout.svg"
+        },
+        {
+            "name": "Kotlin",
+            "slug": "kotlin",
+            "file": "Kotlin.svg"
+        },
+        {
+            "name": "Krakenjs",
+            "slug": "krakenjs",
+            "file": "Krakenjs.svg"
+        },
+        {
+            "name": "Ktor",
+            "slug": "ktor",
+            "file": "Ktor.svg"
+        },
+        {
+            "name": "Kubernetes",
+            "slug": "kubernetes",
+            "file": "Kubernetes.svg"
+        },
+        {
+            "name": "LLVM",
+            "slug": "llvm",
+            "file": "LLVM.svg"
+        },
+        {
+            "name": "LaTeX",
+            "slug": "latex",
+            "file": "LaTeX.svg"
+        },
+        {
+            "name": "LabVIEW",
+            "slug": "labview",
+            "file": "LabVIEW.svg"
+        },
+        {
+            "name": "Laravel",
+            "slug": "laravel",
+            "file": "Laravel.svg"
+        },
+        {
+            "name": "Less.js",
+            "slug": "lessjs",
+            "file": "Less.js.svg"
+        },
+        {
+            "name": "LinkedIn",
+            "slug": "linkedin",
+            "file": "LinkedIn.svg"
+        },
+        {
+            "name": "Linux",
+            "slug": "linux",
+            "file": "Linux.svg"
+        },
+        {
+            "name": "Liquibase",
+            "slug": "liquibase",
+            "file": "Liquibase.svg"
+        },
+        {
+            "name": "Livewire",
+            "slug": "livewire",
+            "file": "Livewire.svg"
+        },
+        {
+            "name": "Logstash",
+            "slug": "logstash",
+            "file": "Logstash.svg"
+        },
+        {
+            "name": "Lua",
+            "slug": "lua",
+            "file": "Lua.svg"
+        },
+        {
+            "name": "Lumen",
+            "slug": "lumen",
+            "file": "Lumen.svg"
+        },
+        {
+            "name": "MATLAB",
+            "slug": "matlab",
+            "file": "MATLAB.svg"
+        },
+        {
+            "name": "MODX",
+            "slug": "modx",
+            "file": "MODX.svg"
+        },
+        {
+            "name": "MS DOS",
+            "slug": "ms-dos",
+            "file": "MS-DOS.svg"
+        },
+        {
+            "name": "Markdown",
+            "slug": "markdown",
+            "file": "Markdown.svg"
+        },
+        {
+            "name": "Material UI",
+            "slug": "material-ui",
+            "file": "Material-UI.svg"
+        },
+        {
+            "name": "Materialize",
+            "slug": "materialize",
+            "file": "Materialize.svg"
+        },
+        {
+            "name": "Matplotlib",
+            "slug": "matplotlib",
+            "file": "Matplotlib.svg"
+        },
+        {
+            "name": "Meteor.js",
+            "slug": "meteorjs",
+            "file": "Meteor.js.svg"
+        },
+        {
+            "name": "Microsoft SQL Server",
+            "slug": "microsoft-sql-server",
+            "file": "Microsoft-SQL-Server.svg"
+        },
+        {
+            "name": "Minitab",
+            "slug": "minitab",
+            "file": "Minitab.svg"
+        },
+        {
+            "name": "MobX",
+            "slug": "mobx",
+            "file": "MobX.svg"
+        },
+        {
+            "name": "Mocha",
+            "slug": "mocha",
+            "file": "Mocha.svg"
+        },
+        {
+            "name": "Moleculer",
+            "slug": "moleculer",
+            "file": "Moleculer.svg"
+        },
+        {
+            "name": "MongoDB",
+            "slug": "mongodb",
+            "file": "MongoDB.svg"
+        },
+        {
+            "name": "Mongoose.js",
+            "slug": "mongoosejs",
+            "file": "Mongoose.js.svg"
+        },
+        {
+            "name": "Moodle",
+            "slug": "moodle",
+            "file": "Moodle.svg"
+        },
+        {
+            "name": "MySQL",
+            "slug": "mysql",
+            "file": "MySQL.svg"
+        },
+        {
+            "name": "NGINX",
+            "slug": "nginx",
+            "file": "NGINX.svg"
+        },
+        {
+            "name": "NHibernate",
+            "slug": "nhibernate",
+            "file": "NHibernate.svg"
+        },
+        {
+            "name": "NPM",
+            "slug": "npm",
+            "file": "NPM.svg"
+        },
+        {
+            "name": "NW.js (node webkit)",
+            "slug": "nwjs-node-webkit",
+            "file": "NW.js-(node-webkit).svg"
+        },
+        {
+            "name": "Nano",
+            "slug": "nano",
+            "file": "Nano.svg"
+        },
+        {
+            "name": "Nerog",
+            "slug": "nerog",
+            "file": "Nerog.svg"
+        },
+        {
+            "name": "Nest.js",
+            "slug": "nestjs",
+            "file": "Nest.js.svg"
+        },
+        {
+            "name": "NetworkX",
+            "slug": "networkx",
+            "file": "NetworkX.svg"
+        },
+        {
+            "name": "New4j",
+            "slug": "new4j",
+            "file": "New4j.svg"
+        },
+        {
+            "name": "Next.js",
+            "slug": "nextjs",
+            "file": "Next.js.svg"
+        },
+        {
+            "name": "Nim",
+            "slug": "nim",
+            "file": "Nim.svg"
+        },
+        {
+            "name": "Nimble",
+            "slug": "nimble",
+            "file": "Nimble.svg"
+        },
+        {
+            "name": "NixOS",
+            "slug": "nixos",
+            "file": "NixOS.svg"
+        },
+        {
+            "name": "Node.js",
+            "slug": "nodejs",
+            "file": "Node.js.svg"
+        },
+        {
+            "name": "Nodemon",
+            "slug": "nodemon",
+            "file": "Nodemon.svg"
+        },
+        {
+            "name": "NuGet",
+            "slug": "nuget",
+            "file": "NuGet.svg"
+        },
+        {
+            "name": "NumPy",
+            "slug": "numpy",
+            "file": "NumPy.svg"
+        },
+        {
+            "name": "Nuxt JS",
+            "slug": "nuxt-js",
+            "file": "Nuxt-JS.svg"
+        },
+        {
+            "name": "OCaml",
+            "slug": "ocaml",
+            "file": "OCaml.svg"
+        },
+        {
+            "name": "Objective C",
+            "slug": "objective-c",
+            "file": "Objective-C.svg"
+        },
+        {
+            "name": "Oh my zsh",
+            "slug": "oh-my-zsh",
+            "file": "Oh-my-zsh.svg"
+        },
+        {
+            "name": "Okta",
+            "slug": "okta",
+            "file": "Okta.svg"
+        },
+        {
+            "name": "OpenAL",
+            "slug": "openal",
+            "file": "OpenAL.svg"
+        },
+        {
+            "name": "OpenAPI",
+            "slug": "openapi",
+            "file": "OpenAPI.svg"
+        },
+        {
+            "name": "OpenCL",
+            "slug": "opencl",
+            "file": "OpenCL.svg"
+        },
+        {
+            "name": "OpenCV",
+            "slug": "opencv",
+            "file": "OpenCV.svg"
+        },
+        {
+            "name": "OpenGL",
+            "slug": "opengl",
+            "file": "OpenGL.svg"
+        },
+        {
+            "name": "OpenStack",
+            "slug": "openstack",
+            "file": "OpenStack.svg"
+        },
+        {
+            "name": "OpenTelemetry",
+            "slug": "opentelemetry",
+            "file": "OpenTelemetry.svg"
+        },
+        {
+            "name": "Opera",
+            "slug": "opera",
+            "file": "Opera.svg"
+        },
+        {
+            "name": "Oracle",
+            "slug": "oracle",
+            "file": "Oracle.svg"
+        },
+        {
+            "name": "PHP",
+            "slug": "php",
+            "file": "PHP.svg"
+        },
+        {
+            "name": "Packer",
+            "slug": "packer",
+            "file": "Packer.svg"
+        },
+        {
+            "name": "Pandas",
+            "slug": "pandas",
+            "file": "Pandas.svg"
+        },
+        {
+            "name": "Perl",
+            "slug": "perl",
+            "file": "Perl.svg"
+        },
+        {
+            "name": "Phalcon",
+            "slug": "phalcon",
+            "file": "Phalcon.svg"
+        },
+        {
+            "name": "Phoenix Framework",
+            "slug": "phoenix-framework",
+            "file": "Phoenix-Framework.svg"
+        },
+        {
+            "name": "Photon Engine ",
+            "slug": "photon-engine-",
+            "file": "Photon-Engine-.svg"
+        },
+        {
+            "name": "PhpStorm",
+            "slug": "phpstorm",
+            "file": "PhpStorm.svg"
+        },
+        {
+            "name": "Playwrite",
+            "slug": "playwrite",
+            "file": "Playwrite.svg"
+        },
+        {
+            "name": "Ploty",
+            "slug": "ploty",
+            "file": "Ploty.svg"
+        },
+        {
+            "name": "Podman",
+            "slug": "podman",
+            "file": "Podman.svg"
+        },
+        {
+            "name": "Polygon",
+            "slug": "polygon",
+            "file": "Polygon.svg"
+        },
+        {
+            "name": "Portainer",
+            "slug": "portainer",
+            "file": "Portainer.svg"
+        },
+        {
+            "name": "PostCSS",
+            "slug": "postcss",
+            "file": "PostCSS.svg"
+        },
+        {
+            "name": "PostgresSQL",
+            "slug": "postgressql",
+            "file": "PostgresSQL.svg"
+        },
+        {
+            "name": "Postman",
+            "slug": "postman",
+            "file": "Postman.svg"
+        },
+        {
+            "name": "Powershell",
+            "slug": "powershell",
+            "file": "Powershell.svg"
+        },
+        {
+            "name": "Processing",
+            "slug": "processing",
+            "file": "Processing.svg"
+        },
+        {
+            "name": "Prometheus",
+            "slug": "prometheus",
+            "file": "Prometheus.svg"
+        },
+        {
+            "name": "Protractor Test",
+            "slug": "protractor-test",
+            "file": "Protractor-Test.svg"
+        },
+        {
+            "name": "PuTTY",
+            "slug": "putty",
+            "file": "PuTTY.svg"
+        },
+        {
+            "name": "PureScript",
+            "slug": "purescript",
+            "file": "PureScript.svg"
+        },
+        {
+            "name": "PyCharm",
+            "slug": "pycharm",
+            "file": "PyCharm.svg"
+        },
+        {
+            "name": "PyScript",
+            "slug": "pyscript",
+            "file": "PyScript.svg"
+        },
+        {
+            "name": "PyTorch",
+            "slug": "pytorch",
+            "file": "PyTorch.svg"
+        },
+        {
+            "name": "Python Poetry",
+            "slug": "python-poetry",
+            "file": "Python-Poetry.svg"
+        },
+        {
+            "name": "Python",
+            "slug": "python",
+            "file": "Python.svg"
+        },
+        {
+            "name": "Qodana",
+            "slug": "qodana",
+            "file": "Qodana.svg"
+        },
+        {
+            "name": "Qt Framework",
+            "slug": "qt-framework",
+            "file": "Qt-Framework.svg"
+        },
+        {
+            "name": "Quarkus",
+            "slug": "quarkus",
+            "file": "Quarkus.svg"
+        },
+        {
+            "name": "Quasar",
+            "slug": "quasar",
+            "file": "Quasar.svg"
+        },
+        {
+            "name": "Qwik",
+            "slug": "qwik",
+            "file": "Qwik.svg"
+        },
+        {
+            "name": "R ",
+            "slug": "r-",
+            "file": "R-.svg"
+        },
+        {
+            "name": "RSpec",
+            "slug": "rspec",
+            "file": "RSpec.svg"
+        },
+        {
+            "name": "RStudio",
+            "slug": "rstudio",
+            "file": "RStudio.svg"
+        },
+        {
+            "name": "RabbitMQ",
+            "slug": "rabbitmq",
+            "file": "RabbitMQ.svg"
+        },
+        {
+            "name": "Rancher",
+            "slug": "rancher",
+            "file": "Rancher.svg"
+        },
+        {
+            "name": "Raspberry Pi",
+            "slug": "raspberry-pi",
+            "file": "Raspberry-Pi.svg"
+        },
+        {
+            "name": "Reach",
+            "slug": "reach",
+            "file": "Reach.svg"
+        },
+        {
+            "name": "React Bootstrap",
+            "slug": "react-bootstrap",
+            "file": "React-Bootstrap.svg"
+        },
+        {
+            "name": "React",
+            "slug": "react",
+            "file": "React.svg"
+        },
+        {
+            "name": "Realm",
+            "slug": "realm",
+            "file": "Realm.svg"
+        },
+        {
+            "name": "Red Hat",
+            "slug": "red-hat",
+            "file": "Red-Hat.svg"
+        },
+        {
+            "name": "RedCube's epic Compiler Thingy programming (ReCT)",
+            "slug": "redcubes-epic-compiler-thingy-programming-rect",
+            "file": "RedCube's-epic-Compiler-Thingy-programming-(ReCT).svg"
+        },
+        {
+            "name": "Redis",
+            "slug": "redis",
+            "file": "Redis.svg"
+        },
+        {
+            "name": "Redux",
+            "slug": "redux",
+            "file": "Redux.svg"
+        },
+        {
+            "name": "Ren'Py",
+            "slug": "renpy",
+            "file": "Ren'Py.svg"
+        },
+        {
+            "name": "Rider",
+            "slug": "rider",
+            "file": "Rider.svg"
+        },
+        {
+            "name": "Robot Operating System (ROS)",
+            "slug": "robot-operating-system-ros",
+            "file": "Robot-Operating-System-(ROS).svg"
+        },
+        {
+            "name": "RocksDB",
+            "slug": "rocksdb",
+            "file": "RocksDB.svg"
+        },
+        {
+            "name": "Rollup.js",
+            "slug": "rollupjs",
+            "file": "Rollup.js.svg"
+        },
+        {
+            "name": "Ruby on Rails",
+            "slug": "ruby-on-rails",
+            "file": "Ruby-on-Rails.svg"
+        },
+        {
+            "name": "Ruby",
+            "slug": "ruby",
+            "file": "Ruby.svg"
+        },
+        {
+            "name": "RubyMine",
+            "slug": "rubymine",
+            "file": "RubyMine.svg"
+        },
+        {
+            "name": "Rust",
+            "slug": "rust",
+            "file": "Rust.svg"
+        },
+        {
+            "name": "SQL Developer",
+            "slug": "sql-developer",
+            "file": "SQL-Developer.svg"
+        },
+        {
+            "name": "SQLAlchemy",
+            "slug": "sqlalchemy",
+            "file": "SQLAlchemy.svg"
+        },
+        {
+            "name": "SQLite",
+            "slug": "sqlite",
+            "file": "SQLite.svg"
+        },
+        {
+            "name": "SSH",
+            "slug": "ssh",
+            "file": "SSH.svg"
+        },
+        {
+            "name": "Salesforce",
+            "slug": "salesforce",
+            "file": "Salesforce.svg"
+        },
+        {
+            "name": "Sanity",
+            "slug": "sanity",
+            "file": "Sanity.svg"
+        },
+        {
+            "name": "Sass",
+            "slug": "sass",
+            "file": "Sass.svg"
+        },
+        {
+            "name": "Scala",
+            "slug": "scala",
+            "file": "Scala.svg"
+        },
+        {
+            "name": "Scalingo",
+            "slug": "scalingo",
+            "file": "Scalingo.svg"
+        },
+        {
+            "name": "Selenium",
+            "slug": "selenium",
+            "file": "Selenium.svg"
+        },
+        {
+            "name": "Sema Software",
+            "slug": "sema-software",
+            "file": "Sema-Software.svg"
+        },
+        {
+            "name": "Sequelize",
+            "slug": "sequelize",
+            "file": "Sequelize.svg"
+        },
+        {
+            "name": "Shopware",
+            "slug": "shopware",
+            "file": "Shopware.svg"
+        },
+        {
+            "name": "Simple DirectMedia Layer (SDL)",
+            "slug": "simple-directmedia-layer-sdl",
+            "file": "Simple-DirectMedia-Layer-(SDL).svg"
+        },
+        {
+            "name": "Sketch",
+            "slug": "sketch",
+            "file": "Sketch.svg"
+        },
+        {
+            "name": "Slack",
+            "slug": "slack",
+            "file": "Slack.svg"
+        },
+        {
+            "name": "Socket.io",
+            "slug": "socketio",
+            "file": "Socket.io.svg"
+        },
+        {
+            "name": "Solid.js",
+            "slug": "solidjs",
+            "file": "Solid.js.svg"
+        },
+        {
+            "name": "Solidity",
+            "slug": "solidity",
+            "file": "Solidity.svg"
+        },
+        {
+            "name": "SonarQube",
+            "slug": "sonarqube",
+            "file": "SonarQube.svg"
+        },
+        {
+            "name": "Sourcetree",
+            "slug": "sourcetree",
+            "file": "Sourcetree.svg"
+        },
+        {
+            "name": "Splunk",
+            "slug": "splunk",
+            "file": "Splunk.svg"
+        },
+        {
+            "name": "Spring",
+            "slug": "spring",
+            "file": "Spring.svg"
+        },
+        {
+            "name": "Stack Overflow",
+            "slug": "stack-overflow",
+            "file": "Stack-Overflow.svg"
+        },
+        {
+            "name": "Stata",
+            "slug": "stata",
+            "file": "Stata.svg"
+        },
+        {
+            "name": "Storybook",
+            "slug": "storybook",
+            "file": "Storybook.svg"
+        },
+        {
+            "name": "Streamlit",
+            "slug": "streamlit",
+            "file": "Streamlit.svg"
+        },
+        {
+            "name": "Stylus",
+            "slug": "stylus",
+            "file": "Stylus.svg"
+        },
+        {
+            "name": "Svelte",
+            "slug": "svelte",
+            "file": "Svelte.svg"
+        },
+        {
+            "name": "Swagger",
+            "slug": "swagger",
+            "file": "Swagger.svg"
+        },
+        {
+            "name": "Swift",
+            "slug": "swift",
+            "file": "Swift.svg"
+        },
+        {
+            "name": "Symfony",
+            "slug": "symfony",
+            "file": "Symfony.svg"
+        },
+        {
+            "name": "TYPO3",
+            "slug": "typo3",
+            "file": "TYPO3.svg"
+        },
+        {
+            "name": "Tailwind CSS",
+            "slug": "tailwind-css",
+            "file": "Tailwind-CSS.svg"
+        },
+        {
+            "name": "Tauri",
+            "slug": "tauri",
+            "file": "Tauri.svg"
+        },
+        {
+            "name": "TeX",
+            "slug": "tex",
+            "file": "TeX.svg"
+        },
+        {
+            "name": "TensorFlow",
+            "slug": "tensorflow",
+            "file": "TensorFlow.svg"
+        },
+        {
+            "name": "The Algorithms",
+            "slug": "the-algorithms",
+            "file": "The-Algorithms.svg"
+        },
+        {
+            "name": "Three.js",
+            "slug": "threejs",
+            "file": "Three.js.svg"
+        },
+        {
+            "name": "Titanium SDK",
+            "slug": "titanium-sdk",
+            "file": "Titanium-SDK.svg"
+        },
+        {
+            "name": "TortoiseGit",
+            "slug": "tortoisegit",
+            "file": "TortoiseGit.svg"
+        },
+        {
+            "name": "Tower",
+            "slug": "tower",
+            "file": "Tower.svg"
+        },
+        {
+            "name": "Traefik Mesh",
+            "slug": "traefik-mesh",
+            "file": "Traefik-Mesh.svg"
+        },
+        {
+            "name": "Traefik Proxy",
+            "slug": "traefik-proxy",
+            "file": "Traefik-Proxy.svg"
+        },
+        {
+            "name": "Travis CI",
+            "slug": "travis-ci",
+            "file": "Travis-CI.svg"
+        },
+        {
+            "name": "Trello",
+            "slug": "trello",
+            "file": "Trello.svg"
+        },
+        {
+            "name": "Twitter",
+            "slug": "twitter",
+            "file": "Twitter.svg"
+        },
+        {
+            "name": "TypeScript",
+            "slug": "typescript",
+            "file": "TypeScript.svg"
+        },
+        {
+            "name": "UNIX",
+            "slug": "unix",
+            "file": "UNIX.svg"
+        },
+        {
+            "name": "Ubuntu",
+            "slug": "ubuntu",
+            "file": "Ubuntu.svg"
+        },
+        {
+            "name": "Unified Modelling Language (UML)",
+            "slug": "unified-modelling-language-uml",
+            "file": "Unified-Modelling-Language-(UML).svg"
+        },
+        {
+            "name": "Unity",
+            "slug": "unity",
+            "file": "Unity.svg"
+        },
+        {
+            "name": "Unreal Engine",
+            "slug": "unreal-engine",
+            "file": "Unreal-Engine.svg"
+        },
+        {
+            "name": "V8",
+            "slug": "v8",
+            "file": "V8.svg"
+        },
+        {
+            "name": "Vala",
+            "slug": "vala",
+            "file": "Vala.svg"
+        },
+        {
+            "name": "Vercel",
+            "slug": "vercel",
+            "file": "Vercel.svg"
+        },
+        {
+            "name": "Veutify",
+            "slug": "veutify",
+            "file": "Veutify.svg"
+        },
+        {
+            "name": "Vim",
+            "slug": "vim",
+            "file": "Vim.svg"
+        },
+        {
+            "name": "Visual Studio Code (VS Code)",
+            "slug": "visual-studio-code-vs-code",
+            "file": "Visual-Studio-Code-(VS-Code).svg"
+        },
+        {
+            "name": "Visual Studio",
+            "slug": "visual-studio",
+            "file": "Visual-Studio.svg"
+        },
+        {
+            "name": "Vite.js",
+            "slug": "vitejs",
+            "file": "Vite.js.svg"
+        },
+        {
+            "name": "Vite",
+            "slug": "vite",
+            "file": "Vite.svg"
+        },
+        {
+            "name": "Vue Storefront",
+            "slug": "vue-storefront",
+            "file": "Vue-Storefront.svg"
+        },
+        {
+            "name": "Vue.js",
+            "slug": "vuejs",
+            "file": "Vue.js.svg"
+        },
+        {
+            "name": "Vyper",
+            "slug": "vyper",
+            "file": "Vyper.svg"
+        },
+        {
+            "name": "WebAssembly",
+            "slug": "webassembly",
+            "file": "WebAssembly.svg"
+        },
+        {
+            "name": "WebStorm",
+            "slug": "webstorm",
+            "file": "WebStorm.svg"
+        },
+        {
+            "name": "Webflow",
+            "slug": "webflow",
+            "file": "Webflow.svg"
+        },
+        {
+            "name": "Weblate",
+            "slug": "weblate",
+            "file": "Weblate.svg"
+        },
+        {
+            "name": "Webpack",
+            "slug": "webpack",
+            "file": "Webpack.svg"
+        },
+        {
+            "name": "Windows 11",
+            "slug": "windows-11",
+            "file": "Windows-11.svg"
+        },
+        {
+            "name": "Windows 8",
+            "slug": "windows-8",
+            "file": "Windows-8.svg"
+        },
+        {
+            "name": "WooCommerce",
+            "slug": "woocommerce",
+            "file": "WooCommerce.svg"
+        },
+        {
+            "name": "WordPress",
+            "slug": "wordpress",
+            "file": "WordPress.svg"
+        },
+        {
+            "name": "XML",
+            "slug": "xml",
+            "file": "XML.svg"
+        },
+        {
+            "name": "Xamarin",
+            "slug": "xamarin",
+            "file": "Xamarin.svg"
+        },
+        {
+            "name": "Xcode",
+            "slug": "xcode",
+            "file": "Xcode.svg"
+        },
+        {
+            "name": "YAML",
+            "slug": "yaml",
+            "file": "YAML.svg"
+        },
+        {
+            "name": "Yarn",
+            "slug": "yarn",
+            "file": "Yarn.svg"
+        },
+        {
+            "name": "Yii Framework",
+            "slug": "yii-framework",
+            "file": "Yii-Framework.svg"
+        },
+        {
+            "name": "Yuno Host",
+            "slug": "yuno-host",
+            "file": "Yuno-Host.svg"
+        },
+        {
+            "name": "Zend Framework",
+            "slug": "zend-framework",
+            "file": "Zend-Framework.svg"
+        },
+        {
+            "name": "Zig",
+            "slug": "zig",
+            "file": "Zig.svg"
+        },
+        {
+            "name": "jQuery",
+            "slug": "jquery",
+            "file": "jQuery.svg"
+        },
+        {
+            "name": "openSUSE",
+            "slug": "opensuse",
+            "file": "openSUSE.svg"
+        },
+        {
+            "name": "p5 JS",
+            "slug": "p5-js",
+            "file": "p5-JS.svg"
+        },
+        {
+            "name": "pfSense",
+            "slug": "pfsense",
+            "file": "pfSense.svg"
+        },
+        {
+            "name": "pytest",
+            "slug": "pytest",
+            "file": "pytest.svg"
+        },
+        {
+            "name": "uWSGI",
+            "slug": "uwsgi",
+            "file": "uWSGI.svg"
+        },
+        {
+            "name": "vSphere",
+            "slug": "vsphere",
+            "file": "vSphere.svg"
+        }
+    ]
+}

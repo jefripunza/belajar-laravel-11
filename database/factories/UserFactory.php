@@ -23,14 +23,32 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $day = mt_rand(1, 28);
+        $month = mt_rand(1, 12);
+        $year = mt_rand(1990, 2002);
+        $birthday_date = sprintf('%04d-%02d-%02d', $year, $month, $day);
+
+        $gender = mt_rand(0, 1) == 0 ? 'male' : 'female';
+        $first_name = fake()->firstName($gender);
+        $last_name = fake()->lastName($gender);
         return [
-            'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'password' => static::$password ??= Hash::make('password'),
+            'is_admin' => false,
+
             // $a = $a ? $a : $b; // ternary operator
             // $a = $a ?: $b;     // elvis operator
             // $a ??= $b;         // null coalescing operator
-            'is_admin' => false,
+
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'gender' => $gender,
+            'phone_number' => fake()->e164PhoneNumber(),
+            'whatsapp_number' => fake()->phoneNumber(),
+            'current_address' => fake()->address(),
+            'permanent_address' => fake()->address(),
+            'birthday_date' => $birthday_date,
+
             'activation_at' => now(),
             'remember_token' => Str::random(10),
         ];

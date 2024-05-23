@@ -19,8 +19,8 @@
 
 <body class="h-full">
     <div class="min-h-full">
-        <x-landing.navbar></x-landing.navbar>
-        <x-landing.header>{{ $title }}</x-landing.header>
+        <x-navbar></x-navbar>
+        <x-header>{{ $title }}</x-header>
 
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
