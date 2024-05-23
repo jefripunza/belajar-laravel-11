@@ -9,7 +9,13 @@
 
 <body class="h-full">
     <div class="min-h-full">
-        <x-navbar hide-navmenu="true"></x-navbar>
+        @if (isset($is_public))
+            @if ($is_public == 'false')
+                <x-navbar hide-navmenu="true"></x-navbar>
+            @endif
+        @else
+            <x-navbar hide-navmenu="true"></x-navbar>
+        @endif
 
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">

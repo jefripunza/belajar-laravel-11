@@ -15,9 +15,61 @@
             {{ ucfirst($on) }}
         </h2>
     </div>
-    <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-
+    <form action="{{ route('portfolio-editable', ['on' => $on]) }}" method="POST" enctype="multipart/form-data"
+        class="mx-auto mt-16 max-w-xl sm:mt-20">
+        @csrf
         @if ($on == 'profile')
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div class="sm:col-span-2">
+                    @if ($user['image_url'])
+                        <div class="w-full flex justify-center mb-4">
+                            <img src="/images/profile/{{ $user['image_url'] }}" alt="Preview Profile Image"
+                                style="height: 50%;">
+                        </div>
+                    @endif
+                    <label for="image_url" class="block text-sm font-semibold leading-6 text-black">
+                        Upload Image
+                    </label>
+                    <div class="mt-2.5">
+                        <input type="file" name="image_url" id="image_url"
+                            class="block w-full text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            accept="image/*">
+                    </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label for="description" class="block text-sm font-semibold leading-6 text-black">
+                        Description
+                    </label>
+                    <div class="mt-2.5">
+                        <textarea type="text" name="description" id="description" autocomplete="organization" rows="5"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">{{ $user['description'] ?? '' }}</textarea>
+                    </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                    <label for="status" class="block text-sm font-semibold leading-6 text-black">
+                        Status
+                    </label>
+                    <div class="mt-2.5">
+                        <select name="status" id="status"
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <option value="" {{ $user['status'] ? '' : 'selected' }} disabled hidden>-- Select
+                                Status --</option>
+                            <option value="find-job" {{ $user['status'] == 'find-job' ? 'selected' : '' }}>
+                                Find Job
+                            </option>
+                            <option value="im-working" {{ $user['status'] == 'im-working' ? 'selected' : '' }}>
+                                I'm Working
+                            </option>
+                            <option value="hiring" {{ $user['status'] == 'hiring' ? 'selected' : '' }}>
+                                Hiring
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        @elseif ($on == 'about')
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                     <label for="first-name" class="block text-sm font-semibold leading-6 text-black">
@@ -38,11 +90,11 @@
                     </div>
                 </div>
                 <div class="sm:col-span-2">
-                    <label for="company" class="block text-sm font-semibold leading-6 text-black">
+                    <label for="description" class="block text-sm font-semibold leading-6 text-black">
                         Description
                     </label>
                     <div class="mt-2.5">
-                        <textarea type="text" name="company" id="company" autocomplete="organization" rows="5"
+                        <textarea type="text" name="description" id="description" autocomplete="organization" rows="5"
                             class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                     </div>
                 </div>
@@ -55,13 +107,7 @@
                             <label for="country" class="sr-only">Country</label>
                             <select id="country" name="country"
                                 class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                                <option>ID (+62)</option>
-                                <option>US</option>
-                                <option>CA</option>
-                                <option>EU</option>
-                                <option>UK</option>
-                                <option>YE</option>
-                                <option>MA</option>
+                                <x-phone-number-code-option></x-phone-number-code-option>
                             </select>
                             <svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
                                 viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -84,10 +130,34 @@
                     </div>
                 </div>
             </div>
-        @elseif ($on == 'about')
-
         @elseif ($on == 'content')
         @endif
+
+        <div class="mt-10">
+            <div class="mb-9 text-green-500 text-xs italic">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+            </div>
+            <div class="mb-9 text-red-500 text-xs italic">
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </div>
+        </div>
 
         <div class="mt-10">
             <button type="submit"

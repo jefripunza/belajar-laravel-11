@@ -28,7 +28,10 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('permanent_address')->nullable();
             $table->date('birthday_date')->nullable();
+
+            $table->string('image_url')->nullable();
             $table->text('description')->nullable();
+            $table->string('status')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

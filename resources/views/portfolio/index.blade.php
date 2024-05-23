@@ -11,6 +11,7 @@
             {{ Auth::user()->first_name ??= '' }} {{ Auth::user()->last_name ??= '' }}
         @endif
     </x-slot:title>
+    <x-slot:is_public>{{ $is_public ? 'true' : 'false' }}</x-slot:is_public>
 
     <div class="bg-gray-100">
         <div class="container mx-auto my-5 p-5">
@@ -20,8 +21,7 @@
                     <!-- Profile Card -->
                     <div class="bg-white p-3 border-t-4 border-green-400">
                         <div class="image overflow-hidden">
-                            <img class="h-auto w-full mx-auto"
-                                src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
+                            <img class="h-auto w-full mx-auto" src="/images/profile/{{ $user['image_url'] }}"
                                 alt="" />
                         </div>
                         <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">
@@ -43,11 +43,25 @@
                         </p>
                         <ul
                             class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                            <li class="flex items-center py-3">
-                                <span>Status</span>
-                                <span class="ml-auto"><span
-                                        class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
-                            </li>
+
+                            @if (in_array($user['status'], ['find-job', 'im-working', 'hiring']))
+                                <li class="flex items-center py-3">
+                                    <span>Status</span>
+                                    <span class="ml-auto">
+                                        <span
+                                            class="{{ $user['status'] == 'im-working' ? 'bg-green-500' : '' }}{{ $user['status'] == 'find-job' ? 'bg-yellow-600' : '' }}{{ $user['status'] == 'hiring' ? 'bg-purple-500' : '' }} py-1 px-2 rounded text-white text-sm">
+                                            @if ($user['status'] == 'find-job')
+                                                Find Job
+                                            @elseif ($user['status'] == 'im-working')
+                                                I'm Working
+                                            @elseif ($user['status'] == 'hiring')
+                                                Hiring
+                                            @endif
+                                        </span>
+                                    </span>
+                                </li>
+                            @endif
+
                             <li class="flex items-center py-3">
                                 <span>Member since</span>
                                 <span class="ml-auto">

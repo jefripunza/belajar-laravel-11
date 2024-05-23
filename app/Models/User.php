@@ -31,6 +31,7 @@ class User extends Authenticatable
 
         'activation_code',
 
+        'image_url',
         'first_name',
         'last_name',
         'gender',
@@ -39,6 +40,9 @@ class User extends Authenticatable
         'address',
         'permanent_address',
         'birthday_date',
+
+        'description',
+        'status',
     ];
 
     /**
