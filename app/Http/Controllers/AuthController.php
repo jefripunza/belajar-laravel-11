@@ -17,20 +17,38 @@ class AuthController extends Controller
         $title = 'Register Page';
         $method = $request->method();
         if ($method == "GET") {
-            // skip...
+            if (!Auth::guest()) {
+                return redirect()->route('portfolio');
+            }
         } else if ($method == "POST") {
             $request->validate([
-                'name' => 'required|string|max:255',
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'nullable|string|max:255',
                 'email' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:8',
+                'gender' => 'required|in:male,female',
+                'birthday' => 'required|date',
+                'password' => [
+                    'required',
+                    'string',
+                    'min:8', // Minimum 8 characters
+                    'regex:/[A-Z]/', // Must contain at least one uppercase letter
+                    'regex:/[a-z]/', // Must contain at least one lowercase letter
+                    'regex:/[0-9]/', // Must contain at least one digit
+                    'regex:/[\W_]/' // Must contain at least one special character
+                ],
             ]);
+            // dd($request);
 
             $activation_code = Str::random(60); // Generate activation code
             $user = User::create([
-                'name' => $request->name,
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'activation_code' => $activation_code,
+                'gender' => $request->gender,
+                'birthday_date' => $request->birthday,
+                'remember_token' => Str::random(10),
             ]);
 
             // Kirim email aktivasi
@@ -65,14 +83,18 @@ class AuthController extends Controller
         $title = 'Login Page';
         $method = $request->method();
         if ($method == "GET") {
-            //
+            if (!Auth::guest()) {
+                return redirect()->route('portfolio');
+            }
         } else {
             $request->validate([
                 'email' => 'required|email',
                 'password' => 'required',
             ]);
             $credentials = $request->only('email', 'password');
-            $user = User::where('email', $credentials['email'])->first();
+            $user = User::where('email', $credentials['email'])
+                ->whereNotNull('activation_at')
+                ->first();
             if ($user && Hash::check($credentials['password'], $user->password)) {
                 // join ke sini semua untuk kebutuhan get data...
                 Auth::login($user);

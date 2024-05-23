@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -51,7 +52,7 @@ class Post extends Model
                 'posts.slug as post_slug',
                 'posts.title',
                 'posts.body',
-                'users.name as author',
+                DB::raw("CONCAT(users.first_name, ' ', users.last_name) as author"),
                 'posts.created_at'
             )
             ->get()
@@ -72,7 +73,7 @@ class Post extends Model
                 'posts.slug as post_slug',
                 'posts.title',
                 'posts.body',
-                'users.name as author',
+                DB::raw("CONCAT(users.first_name, ' ', users.last_name) as author"),
                 'posts.created_at'
             )
             ->first();

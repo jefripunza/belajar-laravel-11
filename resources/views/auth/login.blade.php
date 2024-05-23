@@ -11,18 +11,6 @@
             if (password.length < 8) {
                 errors.push('Password must be at least 8 characters long.');
             }
-            if (!password.match(/[A-Z]/)) {
-                errors.push('Password must contain at least one uppercase letter.');
-            }
-            if (!password.match(/[a-z]/)) {
-                errors.push('Password must contain at least one lowercase letter.');
-            }
-            if (!password.match(/\d/)) {
-                errors.push('Password must contain at least one digit.');
-            }
-            if (!password.match(/[\W_]/)) {
-                errors.push('Password must contain at least one symbol.');
-            }
             this.passwordErrors = errors.join('<br>');
         },
         submitForm() {

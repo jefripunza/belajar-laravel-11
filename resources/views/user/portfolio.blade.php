@@ -1,3 +1,7 @@
+@php
+    use Carbon\Carbon;
+@endphp
+
 <x-layout.user>
     <x-slot:title>{{ $title }}</x-slot:title>
     <x-slot:title_form>User Page</x-slot:title_form>
@@ -20,10 +24,8 @@
                         <h3 class="text-gray-600 font-lg text-semibold leading-6">
                             Owner at Her Company Inc.
                         </h3>
-                        <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non
-                            deserunt
+                        <p class="text-sm text-gray-500 hover:text-gray-600 leading-6 mt-3">
+                            {{ Auth::user()->description ??= '' }}
                         </p>
                         <ul
                             class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
@@ -96,11 +98,15 @@
                             <div class="grid md:grid-cols-2 text-sm">
                                 <div class="grid grid-cols-2">
                                     <div class="px-4 py-2 font-semibold">First Name</div>
-                                    <div class="px-4 py-2">Jane</div>
+                                    <div class="px-4 py-2">
+                                        {{ Auth::user()->first_name ??= '-' }}
+                                    </div>
                                 </div>
                                 <div class="grid grid-cols-2">
                                     <div class="px-4 py-2 font-semibold">Last Name</div>
-                                    <div class="px-4 py-2">Doe</div>
+                                    <div class="px-4 py-2">
+                                        {{ Auth::user()->last_name ??= '-' }}
+                                    </div>
                                 </div>
                                 <div class="grid grid-cols-2">
                                     <div class="px-4 py-2 font-semibold">Gender</div>
@@ -136,15 +142,17 @@
                                 <div class="grid grid-cols-2">
                                     <div class="px-4 py-2 font-semibold">Birthday</div>
                                     <div class="px-4 py-2">
-                                        {{ Auth::user()->birthday_date ? Auth::user()->birthday_date->format('d F Y') : '-' }}
+                                        {{ Auth::user()->birthday_date ? Carbon::parse(Auth::user()->birthday_date)->format('d F Y') : '-' }}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button
-                            class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">
-                            Show Full Information
-                        </button>
+                        @if (!Auth::guest())
+                            <button
+                                class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        @endif
                     </div>
                     <!-- End of about section -->
 
