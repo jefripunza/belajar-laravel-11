@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class LandingPageController extends Controller
+class LandingController extends Controller
 {
     public function home()
     {
-        return view('home', [
+        return view('landing.home', [
             'title' => 'Home Page',
         ]);
     }
@@ -17,7 +17,7 @@ class LandingPageController extends Controller
 
     public function posts(Request $request)
     {
-        return view('posts', [
+        return view('landing.posts', [
             'title' => 'Posts Page',
             'posts' => Post::paginate(),
         ]);
@@ -26,14 +26,14 @@ class LandingPageController extends Controller
 
     public function post(string $slug)
     {
-        return view('post', [
+        return view('landing.post', [
             'post' => Post::findBySlug($slug),
         ]);
     }
 
     public function about()
     {
-        return view('about', [
+        return view('landing.about', [
             'title' => 'About Page',
             'name' => "Jefri Herdi Triyanto",
         ]);
@@ -47,7 +47,7 @@ class LandingPageController extends Controller
             "instagram" => "@jefripunza",
             "linkedin" => "https://www.linkedin.com/in/jefri-herdi-triyanto-ba76a8106/",
         ];
-        return view('contact', [
+        return view('landing.contact', [
             'title' => 'Contact Page',
             'info' => $info,
         ]);

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout.landing>
     <x-slot:title>{{ $title }}</x-slot:title>
     <div>
         @if ($posts)
@@ -20,4 +20,4 @@
             <div>Tidak ada artikel yang tersedia.</div>
         @endif
     </div>
-</x-layout>
+</x-layout.landing>

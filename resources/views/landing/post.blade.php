@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout.landing>
     <x-slot:title>{{ $post['title'] ?? 'No Title' }}</x-slot:title>
     @if ($post)
         <p>{{ $post['body'] }}</p>
@@ -8,4 +8,4 @@
     @else
         <div>Artikel tidak tersedia.</div>
     @endif
-</x-layout>
+</x-layout.landing>

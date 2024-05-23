@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean("is_admin")->default(false);
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('activation_code')->nullable(); // ini untuk activation code
+            $table->timestamp('activation_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout.landing>
     <x-slot:title>{{ $title }}</x-slot:title>
     <p>Welcome to Contact Page</p>
     <table>
@@ -19,4 +19,4 @@
             <td>{{ $info['linkedin'] }}</td>
         </tr>
     </table>
-</x-layout>
+</x-layout.landing>
