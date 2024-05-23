@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('last_name')->nullable();
             $table->string('gender')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('whatsapp_number')->nullable();
-            $table->string('current_address')->nullable();
+            $table->boolean('is_whatsapp_number')->default(false);
+            $table->string('address')->nullable();
             $table->string('permanent_address')->nullable();
             $table->date('birthday_date')->nullable();
             $table->text('description')->nullable();

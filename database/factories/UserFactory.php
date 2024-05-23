@@ -44,8 +44,8 @@ class UserFactory extends Factory
             'last_name' => $last_name,
             'gender' => $gender,
             'phone_number' => fake()->e164PhoneNumber(),
-            'whatsapp_number' => fake()->phoneNumber(),
-            'current_address' => fake()->address(),
+            'is_whatsapp_number' => $gender == "male",
+            'address' => fake()->address(),
             'permanent_address' => fake()->address(),
             'birthday_date' => $birthday_date,
 

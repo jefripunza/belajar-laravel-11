@@ -32,3 +32,4 @@ Route::get('activation/{code}', [Controllers\AuthController::class, 'activateAcc
 //-> Logged Page
 Route::get('portfolio', [Controllers\PortfolioController::class, 'manage'])->name('portfolio');
 Route::get('portfolio/{slug}', [Controllers\PortfolioController::class, 'public']);
+Route::get('edit/portfolio/{on}', [Controllers\PortfolioController::class, 'editable']);

@@ -35,8 +35,8 @@ class User extends Authenticatable
         'last_name',
         'gender',
         'phone_number',
-        'whatsapp_number',
-        'current_address',
+        'is_whatsapp_number',
+        'address',
         'permanent_address',
         'birthday_date',
     ];
