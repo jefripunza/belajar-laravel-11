@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         if (!$userExist) {
             User::factory()->create([
                 'first_name' => 'Admin',
+                'last_name' => null,
                 'email' => 'admin@example.com',
                 'password' => Hash::make('v3ry_secret'), // default admin password
                 'is_admin' => true,
@@ -29,8 +30,7 @@ class DatabaseSeeder extends Seeder
         }
 
         if (app()->environment('local')) {
-            User::factory(9)->create();
-            Post::factory(99)->create();
+            Post::factory(99)->recycle(User::factory(9)->create())->create();
             $this->command->info('Additional data created in local environment.');
         }
 

@@ -32,6 +32,8 @@ class UserFactory extends Factory
         $first_name = fake()->firstName($gender);
         $last_name = fake()->lastName($gender);
         return [
+            // 'username' => fake()->unique()->username(),
+            'username' => Str::slug("$first_name $last_name"),
             'email' => fake()->unique()->safeEmail(),
             'password' => static::$password ??= Hash::make('password'),
             'is_admin' => false,

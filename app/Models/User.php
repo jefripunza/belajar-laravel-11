@@ -3,9 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Enums;
+
+
 
 class User extends Authenticatable
 {
@@ -17,7 +22,7 @@ class User extends Authenticatable
      * @var string
      */
     protected $table = "users";
-    protected $primaryKey = "id";
+    protected $primaryKey = Enums\UserColumn::ID->value;
 
     /**
      * The attributes that are mass assignable.
@@ -25,24 +30,24 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'email',
-        'password',
-        'is_admin',
+        Enums\UserColumn::Email->value,
+        Enums\UserColumn::Password->value,
+        Enums\UserColumn::IsAdmin->value,
 
-        'activation_code',
+        Enums\UserColumn::ActivationCode->value,
 
-        'image_url',
-        'first_name',
-        'last_name',
-        'gender',
-        'phone_number',
-        'is_whatsapp_number',
-        'address',
-        'permanent_address',
-        'birthday_date',
+        Enums\UserColumn::ImageURL->value,
+        Enums\UserColumn::FirstName->value,
+        Enums\UserColumn::LastName->value,
+        Enums\UserColumn::Gender->value,
+        Enums\UserColumn::PhoneNumber->value,
+        Enums\UserColumn::IsWhatsAppNumber->value,
+        Enums\UserColumn::Address->value,
+        Enums\UserColumn::PermanentAddress->value,
+        Enums\UserColumn::BirthdayDate->value,
 
-        'description',
-        'status',
+        Enums\UserColumn::Description->value,
+        Enums\UserColumn::Status->value,
     ];
 
     /**
@@ -51,20 +56,33 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        Enums\UserColumn::Password->value,
+        Enums\UserColumn::RememberToken->value,
     ];
 
     /**
      * Get the attributes that should be cast.
      *
-     * @return array<string, string>
+     * @var array<string, string>
      */
-    protected function casts(): array
+    protected $casts = [
+        Enums\UserColumn::ActivationAt->value => 'datetime',
+        Enums\UserColumn::Password->value => 'hashed',
+    ];
+
+    public function posts(): HasMany
     {
-        return [
-            'activation_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(Post::class, Enums\PostColumn::AuthorID->value);
+    }
+
+    /**
+     * Find a single user by username.
+     *
+     * @param string $username
+     * @return User|null
+     */
+    public static function findOneByUsername(string $username)
+    {
+        return User::where(Enums\UserColumn::Username->value, $username)->first();
     }
 }

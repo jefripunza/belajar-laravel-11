@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
+
+use function PHPSTORM_META\map;
 
 class LandingController extends Controller
 {
@@ -18,6 +21,7 @@ class LandingController extends Controller
     {
         return view('landing.posts', [
             'title' => 'Posts Page',
+            // 'posts' => Post::all(),
             'posts' => Post::paginate(),
         ]);
     }
@@ -26,6 +30,17 @@ class LandingController extends Controller
     {
         return view('landing.post', [
             'post' => Post::findBySlug($slug),
+        ]);
+    }
+
+    public function author_articles(string $username, Request $request)
+    {
+        $user = User::findOneByUsername($username);
+        $posts = $user->posts
+            ->map(fn ($post) => Post::formatData($post));
+        return view('landing.posts', [
+            'title' => 'Articles by ' . $user->first_name . " " . $user->last_name,
+            'posts' => $posts,
         ]);
     }
 

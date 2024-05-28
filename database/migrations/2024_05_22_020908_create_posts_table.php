@@ -16,7 +16,15 @@ return new class extends Migration
             $table->string("slug")->unique()->nullable(false);
             $table->string("title")->nullable(false);
             $table->text("body")->nullable(false);
-            $table->foreignId("author_id")->constrained("users")->onDelete("cascade");
+
+            // $table->unsignedBigInteger("author_id");
+            // $table->foreign("author_id")->references("id")->on("users");
+
+            $table->foreignId("author_id")->constrained(
+                table: "users",
+                indexName: "posts_author_id",
+            )->onDelete("cascade");
+
             $table->timestamps();
         });
     }

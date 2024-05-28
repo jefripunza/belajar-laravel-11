@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controllers\LandingController::class, "home"]);
 Route::get('posts', [Controllers\LandingController::class, "posts"])->name('posts');
 Route::get('post/{slug}',  [Controllers\LandingController::class, "post"]);
+Route::get('articles/{username}',  [Controllers\LandingController::class, "author_articles"]);
 Route::get('about', [Controllers\LandingController::class, "about"]);
 Route::get('contact', [Controllers\LandingController::class, "contact"]);
 
