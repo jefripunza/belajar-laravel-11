@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         if (!$userExist) {
             User::factory()->create([
                 'first_name' => 'Admin',
-                'last_name' => null,
+                'last_name' => "Uyee",
                 'email' => 'admin@example.com',
                 'password' => Hash::make('v3ry_secret'), // default admin password
                 'is_admin' => true,

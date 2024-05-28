@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Enums;
+use App\Column;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
@@ -21,7 +21,7 @@ class Post extends Model
      * @var string
      */
     protected $table = "posts";
-    protected $primaryKey = Enums\PostColumn::ID->value;
+    protected $primaryKey = Column\Post::ID->value;
 
     /**
      * The attributes that are mass assignable.
@@ -29,15 +29,15 @@ class Post extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        Enums\PostColumn::Slug->value,
-        Enums\PostColumn::Title->value,
-        Enums\PostColumn::Body->value,
-        Enums\PostColumn::AuthorID->value,
+        Column\Post::Slug->value,
+        Column\Post::Title->value,
+        Column\Post::Body->value,
+        Column\Post::AuthorID->value,
     ];
 
     public function author(): BelongsTo
     {
-        return $this->belongsTo(User::class, Enums\PostColumn::AuthorID->value);
+        return $this->belongsTo(User::class, Column\Post::AuthorID->value);
     }
 
     public static function formatData($post)
@@ -55,15 +55,15 @@ class Post extends Model
 
     public static function paginate()
     {
-        $posts = self::join('users', Enums\PostTableColumn::AuthorID->value, '=', Enums\UserTableColumn::ID->value)
+        $posts = self::join('users', Column\PostTable::AuthorID->value, '=', Column\UserTable::ID->value)
             ->select(
-                Enums\PostTableColumn::ID->value,
-                DB::raw(Enums\PostTableColumn::Slug->value . " as post_slug"),
-                Enums\PostTableColumn::Title->value,
-                Enums\PostTableColumn::Body->value,
-                DB::raw("CONCAT(" . Enums\UserTableColumn::FirstName->value . ", ' ', " . Enums\UserTableColumn::LastName->value . ") as author"),
-                DB::raw(Enums\UserTableColumn::Username->value . " as author_slug"),
-                Enums\PostTableColumn::CreatedAt->value
+                Column\PostTable::ID->value,
+                DB::raw(Column\PostTable::Slug->value . " as post_slug"),
+                Column\PostTable::Title->value,
+                Column\PostTable::Body->value,
+                DB::raw("CONCAT(" . Column\UserTable::FirstName->value . ", ' ', " . Column\UserTable::LastName->value . ") as author"),
+                DB::raw(Column\UserTable::Username->value . " as author_slug"),
+                Column\PostTable::CreatedAt->value
             )
             ->get()
             ->map(fn ($post) => static::formatData($post));
@@ -77,15 +77,15 @@ class Post extends Model
         //     return $post['post_slug'] == $post_slug;
         // });
         // $post = Arr::first(static::all(), fn ($post) => $post['post_slug'] == $post_slug);
-        $post = self::join('users', Enums\PostTableColumn::AuthorID->value, '=', Enums\UserTableColumn::ID->value)
-            ->where(Enums\PostTableColumn::Slug->value, $post_slug)
+        $post = self::join('users', Column\PostTable::AuthorID->value, '=', Column\UserTable::ID->value)
+            ->where(Column\PostTable::Slug->value, $post_slug)
             ->select(
-                Enums\PostTableColumn::ID->value,
-                DB::raw(Enums\PostTableColumn::Slug->value . " as post_slug"),
-                Enums\PostTableColumn::Title->value,
-                Enums\PostTableColumn::Body->value,
-                DB::raw("CONCAT(" . Enums\UserTableColumn::FirstName->value . ", ' ', " . Enums\UserTableColumn::LastName->value . ") as author"),
-                Enums\PostTableColumn::CreatedAt->value
+                Column\PostTable::ID->value,
+                DB::raw(Column\PostTable::Slug->value . " as post_slug"),
+                Column\PostTable::Title->value,
+                Column\PostTable::Body->value,
+                DB::raw("CONCAT(" . Column\UserTable::FirstName->value . ", ' ', " . Column\UserTable::LastName->value . ") as author"),
+                Column\PostTable::CreatedAt->value
             )
             ->first();
         if ($post) {
@@ -102,6 +102,6 @@ class Post extends Model
      */
     public static function findByUserIDs(array $user_ids)
     {
-        return self::whereIn(Enums\PostColumn::AuthorID->value, $user_ids)->get();
+        return self::whereIn(Column\Post::AuthorID->value, $user_ids)->get();
     }
 }

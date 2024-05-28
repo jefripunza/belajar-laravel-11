@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Enums;
+namespace App\Column;
 
-enum UserColumn: string
+enum User: string
 {
     case ID = 'id';
     case Username = 'username';

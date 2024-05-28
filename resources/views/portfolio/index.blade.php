@@ -216,7 +216,7 @@
                                 </div>
                             </div>
                         </div>
-                        @if (!Auth::guest())
+                        @if (!Auth::guest() && ($is_public ? Auth::user()->email == $user['email'] : true))
                             <a href="/edit/portfolio/about"
                                 class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4 text-center">
                                 <i class="fas fa-edit"></i> Edit
@@ -287,7 +287,7 @@
                             </div>
                         </div>
                         <!-- End of Experience and education grid -->
-                        @if (!Auth::guest())
+                        @if (!Auth::guest() && ($is_public ? Auth::user()->email == $user['email'] : true))
                             <a href="/edit/portfolio/content"
                                 class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4 text-center">
                                 <i class="fas fa-edit"></i> Edit

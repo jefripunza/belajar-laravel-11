@@ -8,9 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Enums;
-
-
+use App\Column;
 
 class User extends Authenticatable
 {
@@ -22,7 +20,7 @@ class User extends Authenticatable
      * @var string
      */
     protected $table = "users";
-    protected $primaryKey = Enums\UserColumn::ID->value;
+    protected $primaryKey = Column\User::ID->value;
 
     /**
      * The attributes that are mass assignable.
@@ -30,24 +28,24 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        Enums\UserColumn::Email->value,
-        Enums\UserColumn::Password->value,
-        Enums\UserColumn::IsAdmin->value,
+        Column\User::Email->value,
+        Column\User::Password->value,
+        Column\User::IsAdmin->value,
 
-        Enums\UserColumn::ActivationCode->value,
+        Column\User::ActivationCode->value,
 
-        Enums\UserColumn::ImageURL->value,
-        Enums\UserColumn::FirstName->value,
-        Enums\UserColumn::LastName->value,
-        Enums\UserColumn::Gender->value,
-        Enums\UserColumn::PhoneNumber->value,
-        Enums\UserColumn::IsWhatsAppNumber->value,
-        Enums\UserColumn::Address->value,
-        Enums\UserColumn::PermanentAddress->value,
-        Enums\UserColumn::BirthdayDate->value,
+        Column\User::ImageURL->value,
+        Column\User::FirstName->value,
+        Column\User::LastName->value,
+        Column\User::Gender->value,
+        Column\User::PhoneNumber->value,
+        Column\User::IsWhatsAppNumber->value,
+        Column\User::Address->value,
+        Column\User::PermanentAddress->value,
+        Column\User::BirthdayDate->value,
 
-        Enums\UserColumn::Description->value,
-        Enums\UserColumn::Status->value,
+        Column\User::Description->value,
+        Column\User::Status->value,
     ];
 
     /**
@@ -56,8 +54,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        Enums\UserColumn::Password->value,
-        Enums\UserColumn::RememberToken->value,
+        Column\User::Password->value,
+        Column\User::RememberToken->value,
     ];
 
     /**
@@ -66,13 +64,13 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        Enums\UserColumn::ActivationAt->value => 'datetime',
-        Enums\UserColumn::Password->value => 'hashed',
+        Column\User::ActivationAt->value => 'datetime',
+        Column\User::Password->value => 'hashed',
     ];
 
     public function posts(): HasMany
     {
-        return $this->hasMany(Post::class, Enums\PostColumn::AuthorID->value);
+        return $this->hasMany(Post::class, Column\Post::AuthorID->value);
     }
 
     /**
@@ -83,6 +81,6 @@ class User extends Authenticatable
      */
     public static function findOneByUsername(string $username)
     {
-        return User::where(Enums\UserColumn::Username->value, $username)->first();
+        return User::where(Column\User::Username->value, $username)->first();
     }
 }

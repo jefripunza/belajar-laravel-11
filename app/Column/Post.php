@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Enums;
+namespace App\Column;
 
-enum PostColumn: string
+enum Post: string
 {
     case ID = 'id';
     case Slug = 'slug';

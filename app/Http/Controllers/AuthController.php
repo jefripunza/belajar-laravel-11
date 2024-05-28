@@ -86,7 +86,7 @@ class AuthController extends Controller
             if (!Auth::guest()) {
                 return redirect()->route('portfolio');
             }
-        } else {
+        } else if ($method == "POST") {
             $request->validate([
                 'email' => 'required|email',
                 'password' => 'required',
