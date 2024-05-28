@@ -11,4 +11,3 @@ enum Post: string
     case AuthorID = 'author_id';
     case CreatedAt = 'created_at';
 }
-
